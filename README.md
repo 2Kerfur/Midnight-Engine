@@ -1,2 +1,2 @@
 # Midnight-Engine
-2D &amp; 3D game engine
+2D game engine
