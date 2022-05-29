@@ -1,5 +1,4 @@
-**/.git
-**/.vscode
-**/build
+**/obj
+**/bin
+*.layout
 
-*.exe
