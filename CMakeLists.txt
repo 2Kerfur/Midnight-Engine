@@ -16,5 +16,10 @@ target_include_directories(${PROJECT_NAME}
 target_link_directories(${PROJECT_NAME}
     PRIVATE external/glfw/build/src
 )
+if (WIN32)
+    target_link_libraries(${PROJECT_NAME} glfw3)
+endif (WIN32)
 
-target_link_libraries(${PROJECT_NAME} glfw3 X11 dl pthread)
+if (UNIX)
+    target_link_libraries(${PROJECT_NAME} glfw3 X11 dl pthread)
+endif (UNIX)
