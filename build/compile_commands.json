@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/kerfur/Документы/DEV/GIT/Midnight-Engine/build",
+  "command": "/usr/bin/clang++ -g -o CMakeFiles/MidnightEngine.dir/main.cpp.o -c /home/kerfur/Документы/DEV/GIT/Midnight-Engine/main.cpp",
+  "file": "/home/kerfur/Документы/DEV/GIT/Midnight-Engine/main.cpp"
+}
+]

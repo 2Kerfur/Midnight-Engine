@@ -1,5 +1,6 @@
 **/obj
 **/bin
 *.layout
-
+**/.vs
+**/.vscode
 *.sh
