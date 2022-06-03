@@ -397,3 +397,59 @@ Parsed CXX implicit link information from above output:
   implicit fwks: []
 
 
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/kerfur/Документы/DEV/GIT/Midnight-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja-build cmTC_3d66e && [1/2] Building C object CMakeFiles/cmTC_3d66e.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_3d66e
+
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/kerfur/Документы/DEV/GIT/Midnight-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja-build cmTC_a52de && [1/2] Building C object CMakeFiles/cmTC_a52de.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_a52de
+
+
+
+Determining if the function XOpenDisplay exists in the /usr/lib64/libX11.so;/usr/lib64/libXext.so passed with the following output:
+Change Dir: /home/kerfur/Документы/DEV/GIT/Midnight-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja-build cmTC_89e57 && [1/2] Building C object CMakeFiles/cmTC_89e57.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_89e57
+
+
+
+Determining if the function gethostbyname exists passed with the following output:
+Change Dir: /home/kerfur/Документы/DEV/GIT/Midnight-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja-build cmTC_88ec0 && [1/2] Building C object CMakeFiles/cmTC_88ec0.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_88ec0
+
+
+
+Determining if the function connect exists passed with the following output:
+Change Dir: /home/kerfur/Документы/DEV/GIT/Midnight-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja-build cmTC_a73cf && [1/2] Building C object CMakeFiles/cmTC_a73cf.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_a73cf
+
+
+
+Determining if the function remove exists passed with the following output:
+Change Dir: /home/kerfur/Документы/DEV/GIT/Midnight-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja-build cmTC_ca087 && [1/2] Building C object CMakeFiles/cmTC_ca087.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_ca087
+
+
+
+Determining if the function shmat exists passed with the following output:
+Change Dir: /home/kerfur/Документы/DEV/GIT/Midnight-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja-build cmTC_0c9d2 && [1/2] Building C object CMakeFiles/cmTC_0c9d2.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_0c9d2
+
+
+
