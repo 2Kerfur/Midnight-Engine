@@ -6,6 +6,10 @@ add_executable(${PROJECT_NAME}
     src/App.cpp
     src/App.h
 
+    #AUDIO
+    src/audio/audio.cpp
+    src/audio/audio.h
+
     #WINDOW
     src/window/window.cpp
     src/window/window.h
@@ -45,6 +49,7 @@ target_include_directories(${PROJECT_NAME}
     PUBLIC external/spdlog-1.10.0/include
     PUBLIC external/glad/include
     PUBLIC src
+    PUBLIC external
 )
 target_link_directories(${PROJECT_NAME}
     PRIVATE external/glfw/build/src

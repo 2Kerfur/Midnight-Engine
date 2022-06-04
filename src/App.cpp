@@ -9,17 +9,16 @@ int main()
 {
     Window MainWindow;
 
-    MainWindow.InitWindow(500, 500);
+    MainWindow.InitWindow(500, 500, "MidnightEngine");
 
     MainWindow.LoadGL();
-    
-    LOG_INFO(OpenFolder());
-    
+    MainWindow.SetIcon();
     while (!MainWindow.WindowShouldClose())
     {
 
 
         MainWindow.ReceiveEvents();
+        MainWindow.Render();
     }
     MainWindow.Close();
     return 0;

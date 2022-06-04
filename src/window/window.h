@@ -9,18 +9,24 @@
 #include "GLFW/glfw3native.h"
 #include "utils/log.h"
 
+#include <string.h>
+
 class Window
 {
 private:
+    bool GL_Loaded = false;
     int Win_width;
     int Win_height;
-    char Win_name[128] = "Window";
+    std::string Win_name = "Window";
     GLFWwindow* window;
     
 public:
-    int InitWindow(int window_width, int window_height);
+    int InitWindow(int window_width, int window_height, std::string window_name);
     
+    void SetIcon();
+
     void ReceiveEvents();
+    void Render();
     int WindowShouldClose();
     int Close();
     int GetWidth();
