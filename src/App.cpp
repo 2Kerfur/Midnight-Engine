@@ -1,19 +1,20 @@
 #include <iostream>
-#include "glad/glad.h"
 #include "window/window.h"
+#include "utils/native/FileDialog.h"
+#include "utils/native/FolderDialog.h"
 #include "utils/log.h"
+
+const GLuint WIDTH = 500, HEIGHT = 500;
 int main()
 {
     Window MainWindow;
 
     MainWindow.InitWindow(500, 500);
 
-    //if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
-    //{
-    //std::cout << "Failed to initialize GLAD" << std::endl;
-    //return -1;
-    //}   
-
+    MainWindow.LoadGL();
+    
+    LOG_INFO(OpenFolder());
+    
     while (!MainWindow.WindowShouldClose())
     {
 

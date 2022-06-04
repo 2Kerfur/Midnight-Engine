@@ -3,14 +3,39 @@ cmake_minimum_required(VERSION 3.20)
 project(MidnightEngine VERSION 0.1)
 
 add_executable(${PROJECT_NAME} 
-    src/window/window.cpp
-    src/window/window.h
     src/App.cpp
     src/App.h
+
+    #WINDOW
+    src/window/window.cpp
+    src/window/window.h
+        #events
+        src/window/events/EventSystem.cpp
+        src/window/events/EventSystem.h
+        src/window/events/windowEvent.cpp
+        src/window/events/windowEvent.h
+            #keyboard
+            src/window/events/keyboard/keyboardEvent.cpp
+            src/window/events/keyboard/keyboardEvent.h
+            #mouse
+            src/window/events/mouse/mouseEvent.cpp
+            src/window/events/mouse/mouseEvent.h
+            
+    #UTILS
     src/utils/log.cpp
     src/utils/log.h
+        #native
+        src/utils/native/FileDialog.cpp
+        src/utils/native/FileDialog.h
+        src/utils/native/FolderDialog.cpp
+        src/utils/native/FolderDialog.h
+
+    #RENDER
     src/render/render.cpp
     src/render/render.h
+
+    #external executables
+    external/glad/src/glad.c
 )
 
 add_subdirectory(external/glfw)
@@ -19,6 +44,7 @@ target_include_directories(${PROJECT_NAME}
     PUBLIC external/glfw/include
     PUBLIC external/spdlog-1.10.0/include
     PUBLIC external/glad/include
+    PUBLIC src
 )
 target_link_directories(${PROJECT_NAME}
     PRIVATE external/glfw/build/src
