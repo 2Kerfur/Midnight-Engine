@@ -19,11 +19,14 @@ private:
     int Win_height;
     std::string Win_name = "Window";
     GLFWwindow* window;
+
     
 public:
     int InitWindow(int window_width, int window_height, std::string window_name);
     
     void SetIcon();
+
+    GLFWwindow* GetWindow();
 
     void ReceiveEvents();
     void Render();

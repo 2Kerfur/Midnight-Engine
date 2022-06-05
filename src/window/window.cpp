@@ -37,6 +37,10 @@ int Window::Close()
     return 0;
 }
 
+GLFWwindow* Window::GetWindow()
+{
+    return window;
+}
 
 int Window::WindowShouldClose()
 {

@@ -1,6 +1,6 @@
 #ifdef _WIN32
-    #ifndef HEADERFILE_H
-    #define HEADERFILE_H
+    #ifndef FILEDIALOG_H
+    #define FILEDIALOG_H
     #include <string>
     #include <Windows.h>
     #endif

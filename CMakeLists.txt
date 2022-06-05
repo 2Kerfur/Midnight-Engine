@@ -21,6 +21,8 @@ add_executable(${PROJECT_NAME}
             #keyboard
             src/window/events/keyboard/keyboardEvent.cpp
             src/window/events/keyboard/keyboardEvent.h
+            src/window/events/keyboard/GetKey.h
+            src/window/events/keyboard/GetKey.cpp
             #mouse
             src/window/events/mouse/mouseEvent.cpp
             src/window/events/mouse/mouseEvent.h

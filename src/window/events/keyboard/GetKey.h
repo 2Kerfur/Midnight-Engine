@@ -1,0 +1,1 @@
+char GetCharKey(int number);

@@ -1,0 +1,19 @@
+#ifndef KEYBOARD_H
+    #define KEYBOARD_H
+    #include "GLFW/glfw3.h"
+#endif
+
+class KeyboardEventReader
+{
+private:
+    GLFWwindow* window;
+    char button = '0';
+    void UpdateButton(char key);
+public:
+    void KeyboardButtonPressed(int key);
+    //static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);
+    int Init(GLFWwindow* app_window);
+    void Update();
+    
+    char GetPressedButton();
+};
