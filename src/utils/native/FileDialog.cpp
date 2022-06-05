@@ -1,4 +1,4 @@
-#include "FileDialog.h"
+#include "FileDialog.h" //TODO: FileDialog implementation for linux
 #ifdef _WIN32 //windows specific libs
     #include <shobjidl.h> 
     #include <shlobj.h> 

@@ -5,24 +5,22 @@
 #include "utils/log.h"
 #include "window/events/keyboard/keyboardEvent.h"
 
-const GLuint WIDTH = 500, HEIGHT = 500;
 int main()
 {
     Window MainWindow;
-
     MainWindow.InitWindow(500, 500, "MidnightEngine");
+    MainWindow.SetIcon("images\\icon.png");
 
     MainWindow.LoadGL();
-    MainWindow.SetIcon();
-
-    KeyboardEventReader Keyboard;
-
-    Keyboard.Init(MainWindow.GetWindow());
     
+
+    KeyboardInit(MainWindow.GetWindow());
+    
+
+    MainWindow.CompileShaders();
     while (!MainWindow.WindowShouldClose())
     {
-        
-        LOG_INFO(Keyboard.GetPressedButton());
+        LOG_INFO(GetButton());
         MainWindow.ReceiveEvents();
         MainWindow.Render();
     }

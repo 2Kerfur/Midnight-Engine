@@ -20,16 +20,22 @@ private:
     std::string Win_name = "Window";
     GLFWwindow* window;
 
+
+
+
     
 public:
     int InitWindow(int window_width, int window_height, std::string window_name);
     
-    void SetIcon();
+    void SetIcon(std::string file_name);
 
     GLFWwindow* GetWindow();
 
+    void CompileShaders();
     void ReceiveEvents();
     void Render();
+
+
     int WindowShouldClose();
     int Close();
     int GetWidth();
