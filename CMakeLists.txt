@@ -39,6 +39,7 @@ add_executable(${PROJECT_NAME}
     #RENDER
     src/render/render.cpp
     src/render/render.h
+    src/render/shader.h
 
     #external executables
     external/glad/src/glad.c

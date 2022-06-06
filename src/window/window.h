@@ -11,6 +11,7 @@
 
 #include <string.h>
 
+#include "render/shader.h"
 class Window
 {
 private:
@@ -19,8 +20,8 @@ private:
     int Win_height;
     std::string Win_name = "Window";
     GLFWwindow* window;
-
-
+    Shader ourShader;
+    
 
 
     
