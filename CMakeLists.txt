@@ -40,6 +40,21 @@ add_executable(${PROJECT_NAME}
     src/render/render.cpp
     src/render/render.h
     src/render/shader.h
+    src/render/Object.cpp
+    src/render/Object.h
+        #ui
+        src/render/UI/UI_manager.cpp
+        src/render/UI/UI_manager.h
+            #objects
+            src/render/UI/Objects/Button.cpp
+            src/render/UI/Objects/Button.h
+            src/render/UI/Objects/Image.cpp
+            src/render/UI/Objects/Image.h
+            src/render/UI/Objects/Text.cpp
+            src/render/UI/Objects/Text.h
+            src/render/UI/Objects/UI.cpp
+            src/render/UI/Objects/UI.h
+
 
     #external executables
     external/glad/src/glad.c

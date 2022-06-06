@@ -5,6 +5,9 @@
 #include "utils/log.h"
 #include "window/events/keyboard/keyboardEvent.h"
 
+//#include "render/Object.h"
+#include "render/UI/Objects/UI.h"
+
 int main()
 {
     Window MainWindow;
@@ -12,15 +15,17 @@ int main()
     MainWindow.SetIcon("images\\icon.png");
 
     MainWindow.LoadGL();
-    
+
+    UI TestUi;
+    TestUi.Create();
 
     KeyboardInit(MainWindow.GetWindow());
-    
+
 
     MainWindow.CompileShaders();
     while (!MainWindow.WindowShouldClose())
     {
-        LOG_INFO(GetButton());
+        
         MainWindow.ReceiveEvents();
         MainWindow.Render();
     }
