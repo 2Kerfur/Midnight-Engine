@@ -4,7 +4,8 @@
 #include "utils/native/FolderDialog.h"
 #include "utils/log.h"
 #include "window/events/keyboard/keyboardEvent.h"
-
+#include "audio/audio.h"
+#include<dos.h> //for delay
 //#include "render/Object.h"
 #include "render/UI/Objects/UI.h"
 
@@ -12,7 +13,7 @@ int main()
 {
     Window MainWindow;
     MainWindow.InitWindow(500, 500, "MidnightEngine");
-    MainWindow.SetIcon("images\\icon.png");
+    MainWindow.SetIcon("resources\\images\\icon.png");
 
     MainWindow.LoadGL();
 
@@ -21,6 +22,9 @@ int main()
 
     KeyboardInit(MainWindow.GetWindow());
 
+    Audio TestAudio;
+    TestAudio.EnginePlaySound("resources\\sounds\\bruh.wav");
+    
 
     MainWindow.CompileShaders();
     while (!MainWindow.WindowShouldClose())
