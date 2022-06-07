@@ -1,6 +1,6 @@
-#include "render/Object.h"
+#include "render/GameObject.h"
 
-class UI : public Object
+class UI : public GameObject
 {
 private:
     
@@ -8,4 +8,5 @@ private:
 public:
     int PosOnScreen;
     virtual int Create();
+    virtual int Render();
 };

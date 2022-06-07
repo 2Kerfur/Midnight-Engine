@@ -37,24 +37,28 @@ add_executable(${PROJECT_NAME}
         src/utils/native/FolderDialog.h
 
     #RENDER
-    src/render/render.cpp
-    src/render/render.h
-    src/render/shader.h
-    src/render/Object.cpp
-    src/render/Object.h
+    src/render/RenderSystem.cpp
+    src/render/RenderSystem.h
+    src/render/Shader.h
+    src/render/Shader.cpp
+    src/render/GameObject.cpp
+    src/render/GameObject.h
         #ui
         src/render/UI/UI_manager.cpp
         src/render/UI/UI_manager.h
             #objects
-            src/render/UI/Objects/Button.cpp
-            src/render/UI/Objects/Button.h
-            src/render/UI/Objects/Image.cpp
-            src/render/UI/Objects/Image.h
-            src/render/UI/Objects/Text.cpp
-            src/render/UI/Objects/Text.h
+            src/render/UI/Objects/UI_Button.cpp
+            src/render/UI/Objects/UI_Button.h
+            src/render/UI/Objects/UI_Image.cpp
+            src/render/UI/Objects/UI_Image.h
+            src/render/UI/Objects/UI_Text.cpp
+            src/render/UI/Objects/UI_Text.h
             src/render/UI/Objects/UI.cpp
             src/render/UI/Objects/UI.h
 
+    #TOOLS
+    src/tools/imgui_test.cpp
+    src/tools/imgui_test.h
 
     #external executables
     external/glad/src/glad.c
@@ -68,6 +72,7 @@ target_include_directories(${PROJECT_NAME}
     PUBLIC external/glad/include
     PUBLIC src
     PUBLIC external
+    PUBLIC external/imgui
 )
 target_link_directories(${PROJECT_NAME}
     PRIVATE external/glfw/build/src

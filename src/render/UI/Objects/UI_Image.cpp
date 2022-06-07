@@ -1,4 +1,4 @@
-#include "Image.h"
+#include "UI_Image.h"
 
 int UI_Image::Create()
 {

@@ -5,9 +5,8 @@
 #include "utils/log.h"
 #include "window/events/keyboard/keyboardEvent.h"
 #include "audio/audio.h"
-#include<dos.h> //for delay
-//#include "render/Object.h"
-#include "render/UI/Objects/UI.h"
+
+#include "render/UI/Objects/UI_Image.h"
 
 int main()
 {
@@ -15,21 +14,19 @@ int main()
     MainWindow.InitWindow(500, 500, "MidnightEngine");
     MainWindow.SetIcon("resources\\images\\icon.png");
 
-    MainWindow.LoadGL();
-
-    UI TestUi;
-    TestUi.Create();
+    MainWindow.InitEngine();
 
     KeyboardInit(MainWindow.GetWindow());
 
     Audio TestAudio;
     TestAudio.EnginePlaySound("resources\\sounds\\bruh.wav");
     
+    UI_Image TestImage;
+    TestImage.Create();
+    //MainWindow.EngineAddObj(TestImage);
 
-    MainWindow.CompileShaders();
     while (!MainWindow.WindowShouldClose())
     {
-        
         MainWindow.ReceiveEvents();
         MainWindow.Render();
     }

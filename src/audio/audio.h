@@ -4,6 +4,5 @@ private:
 
 
 public:
-	void EnginePlaySound(char sound[]);
-
+    void EnginePlaySound(char sound[]);
 };
