@@ -1,5 +1,8 @@
 #include "render/UI/Objects/UI.h"
 
+
+
+
 class UI_Image : public UI
 {
 private:
@@ -7,5 +10,6 @@ private:
 
 public:
 	int Create();
+	int Render();
 };
 

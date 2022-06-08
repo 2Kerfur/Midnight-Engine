@@ -4,8 +4,6 @@
 
 #include "glm/glm.hpp" //math
 #include "stb/stb_image.h"
-#include "render/UI/Objects/UI.h"
-#include "render/UI/Objects/UI_Image.h"
 
 float vertices[] = {
 	// positions          // colors           // texture coords
@@ -42,11 +40,11 @@ int RenderSystem::Init(int width, int height)
 
 int RenderSystem::CompileShaders() //TODO: Fix image color from black & white to colorfull
 {
-    ourShader.Create();
+    ourShader.Compile();
     glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-    //-------------------------
+    //-------------------------Render
 
     glGenVertexArrays(1, &VAO);
     glGenBuffers(1, &VBO);
@@ -94,8 +92,6 @@ int RenderSystem::CompileShaders() //TODO: Fix image color from black & white to
         std::cout << "Failed to load texture" << std::endl;
     }
     stbi_image_free(data);
-    // texture 2
-    // ---------
     glGenTextures(1, &texture2);
     glBindTexture(GL_TEXTURE_2D, texture2);
     // set the texture wrapping parameters
@@ -117,14 +113,8 @@ int RenderSystem::CompileShaders() //TODO: Fix image color from black & white to
         std::cout << "Failed to load texture" << std::endl;
     }
     stbi_image_free(data);
+    ourShader.use();
 
-    // tell opengl for each sampler to which texture unit it belongs to (only has to be done once)
-    // -------------------------------------------------------------------------------------------
-    ourShader.use(); // don't forget to activate/use the shader before setting uniforms!
-    // either set it manually like so:
-    //glUniform1i(glGetUniformLocation(ourShader.ID, "texture1"), 0);
-    // or set it via the texture class
-    //ourShader.setInt("texture2", 1);
 	return 0;
 }
 
@@ -137,8 +127,8 @@ void RenderSystem::SetRenderSize(int width, int height)
 
 int RenderSystem::Add_Object(GameObject *gameObject)
 {
-    obj[Obj_count] = gameObject;
-    Obj_count += 1;
+    //obj[Obj_count] = gameObject;
+    //Obj_count += 1;
 	return 0;
 }
 

@@ -1,5 +1,5 @@
 #include "GameObject.h"
-#include <iostream>
+//#include <iostream>
 
 int GameObject::Create()
 {

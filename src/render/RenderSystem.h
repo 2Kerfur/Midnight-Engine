@@ -1,9 +1,7 @@
 #ifndef RENDERSYSTEM
 #define RENDERSYSTEM
 #include "Shader.h"
-
 #include "GameObject.h"
-
 #endif
 
 class RenderSystem

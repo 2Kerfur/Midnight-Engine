@@ -1,6 +1,5 @@
 #ifndef SHADER_H
 #define SHADER_H
-
 #include "glad/glad.h" 
 #include <string>
 #include <fstream>
@@ -11,9 +10,7 @@ class Shader //TODO: Create WORKING Shader loader & add Linux support
 {
 public:
     unsigned int ID;
-    // constructor generates the shader on the fly
-    // ------------------------------------------------------------------------
-    void Create()
+    void Compile()
     {
         std::string vertexCode;
         std::string fragmentCode;

@@ -1,7 +1,12 @@
 #include "UI.h"
-#include <iostream>
+//#include <iostream>
 
 int UI::Create()
+{
+    return 0;
+}
+
+int UI::Render()
 {
     return 0;
 }

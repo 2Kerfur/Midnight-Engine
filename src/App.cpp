@@ -1,12 +1,10 @@
 #include <iostream>
 #include "window/window.h"
-#include "utils/native/FileDialog.h"
-#include "utils/native/FolderDialog.h"
 #include "utils/log.h"
 #include "window/events/keyboard/keyboardEvent.h"
 #include "audio/audio.h"
 
-#include "render/UI/Objects/UI_Image.h"
+//#include "render/UI/Objects/UI_Image.h"
 
 int main()
 {
@@ -21,8 +19,8 @@ int main()
     Audio TestAudio;
     TestAudio.EnginePlaySound("resources\\sounds\\bruh.wav");
     
-    UI_Image TestImage;
-    TestImage.Create();
+    //UI_Image TestImage;
+    //TestImage.Create();
     //MainWindow.EngineAddObj(TestImage);
 
     while (!MainWindow.WindowShouldClose())

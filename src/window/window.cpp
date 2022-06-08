@@ -5,7 +5,7 @@
 #include <Windows.h>
 #endif
 
-
+#include "utils/log.h"
 #include <string>
 #include "stb/stb_image.h"
 int Window::InitWindow(int window_width, int window_height, std::string window_name)
@@ -76,8 +76,8 @@ int Window::InitEngine()
     return 0;
 }
 
-int Window::EngineAddObj(GameObject *obj)
-{
-    RenderEngine.Add_Object(obj);
-    return 0;
-}
+//int Window::EngineAddObj(GameObject *obj)
+//{
+//    RenderEngine.Add_Object(obj);
+//    return 0;
+//}

@@ -2,7 +2,7 @@
 
 int UI_Image::Create()
 {
-	PosOnScreen = 10;
+	//PosOnScreen = 10;
 
 	return 0;
 }

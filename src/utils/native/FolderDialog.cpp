@@ -30,5 +30,5 @@ std::string OpenFolder()
 			imalloc->Release();
 		}
 	}
-	return nullptr;
+	return "nothing";
 }

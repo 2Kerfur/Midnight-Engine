@@ -2,15 +2,16 @@
 #define GLFW_EXPOSE_NATIVE_WIN32
 
 #endif
-#include "render/RenderSystem.h"
 
-#include "GLFW/glfw3.h"
-#include "GLFW/glfw3native.h"
-#include "utils/log.h"
-#include <string.h>
 
-#include "render/Shader.h"
-#include "render/GameObject.h"
+#ifndef WINDOWH
+#define WINDOWH
+    #include "render/RenderSystem.h"
+    #include "GLFW/glfw3.h"
+    #include "GLFW/glfw3native.h"
+    #include <string.h>
+#endif
+
 class Window
 {
 private:
@@ -19,8 +20,6 @@ private:
     int Win_height;
     std::string Win_name = "Window";
     GLFWwindow* window;
-    Shader ourShader;
-    
     
 public:
     RenderSystem RenderEngine;
@@ -37,7 +36,8 @@ public:
     int InitEngine();
     int Close();
     int GetWidth();
+
     int GetHeight();
 
-    int EngineAddObj(GameObject *obj);
+    //int EngineAddObj(GameObject *obj);
 };
