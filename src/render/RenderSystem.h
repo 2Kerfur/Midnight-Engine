@@ -1,7 +1,8 @@
 #ifndef RENDERSYSTEM
 #define RENDERSYSTEM
-#include "Shader.h"
-#include "GameObject.h"
+    #include "Shader.h"
+    #include "GameObject.h"
+    #include "GLFW/glfw3.h"
 #endif
 
 class RenderSystem
@@ -11,11 +12,12 @@ private:
     int Render_width = 100;
     int Render_height = 100;
     Shader ourShader;
+    GLFWwindow* render_window;
     GameObject* obj[100];
     int Obj_count = 0;
 public:
 
-    int Init(int width, int height);
+    int Init(int width, int height, GLFWwindow* window);
 
     int CompileShaders();
     

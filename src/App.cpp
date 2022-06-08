@@ -3,8 +3,10 @@
 #include "utils/log.h"
 #include "window/events/keyboard/keyboardEvent.h"
 #include "audio/audio.h"
+#include<iostream>
+#include<glad/glad.h>
+#include<GLFW/glfw3.h>
 
-//#include "render/UI/Objects/UI_Image.h"
 
 int main()
 {
@@ -17,11 +19,8 @@ int main()
     KeyboardInit(MainWindow.GetWindow());
 
     Audio TestAudio;
-    TestAudio.EnginePlaySound("resources\\sounds\\bruh.wav");
-    
-    //UI_Image TestImage;
-    //TestImage.Create();
-    //MainWindow.EngineAddObj(TestImage);
+    //TestAudio.EnginePlaySound("resources\\sounds\\bruh.wav");
+
 
     while (!MainWindow.WindowShouldClose())
     {
@@ -29,5 +28,6 @@ int main()
         MainWindow.Render();
     }
     MainWindow.Close();
+
     return 0;
 }

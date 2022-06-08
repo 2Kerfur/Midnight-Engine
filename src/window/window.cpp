@@ -17,6 +17,9 @@ int Window::InitWindow(int window_width, int window_height, std::string window_n
     if (!glfwInit())
         return -1;
 
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+
     window = glfwCreateWindow(window_width, window_height, Win_name.c_str(), NULL, NULL); //create main window
     if (!window)
     {
@@ -71,13 +74,7 @@ void Window::Render()
 
 int Window::InitEngine()
 {
-    RenderEngine.Init(Win_width, Win_height);
+    RenderEngine.Init(Win_width, Win_height, window);
     RenderEngine.CompileShaders();
     return 0;
 }
-
-//int Window::EngineAddObj(GameObject *obj)
-//{
-//    RenderEngine.Add_Object(obj);
-//    return 0;
-//}

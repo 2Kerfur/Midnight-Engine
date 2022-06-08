@@ -1,7 +1,12 @@
+#include "imgui.h"
+#include "imgui_impl_glfw.h"
+#include "imgui_impl_opengl3.h"
+
 #include "RenderSystem.h"
 #include "glad/glad.h"
 #include "utils/log.h"
 
+#include "GLFW/glfw3.h"
 #include "glm/glm.hpp" //math
 #include "stb/stb_image.h"
 
@@ -20,7 +25,7 @@ unsigned int VBO, VAO, EBO;
 unsigned int texture1, texture2;
 
 
-int RenderSystem::Init(int width, int height)
+int RenderSystem::Init(int width, int height, GLFWwindow* window)
 {
 	Render_width = width;
 	Render_height = height;
@@ -35,6 +40,7 @@ int RenderSystem::Init(int width, int height)
 		Render_loaded = true;
 		return 0;
 	}
+    render_window = window;
 	glViewport(0, 0, width, height);
 }
 
@@ -114,6 +120,16 @@ int RenderSystem::CompileShaders() //TODO: Fix image color from black & white to
     }
     stbi_image_free(data);
     ourShader.use();
+
+    //imgui----------
+
+    //IMGUI_CHECKVERSION();
+    //ImGui::CreateContext();
+    //ImGuiIO& io = ImGui::GetIO(); (void)io;
+    //ImGui::StyleColorsDark();
+    //ImGui_ImplGlfw_InitForOpenGL(render_window, true);
+    //ImGui_ImplOpenGL3_Init("#version 130");
+    //imgui----------
 
 	return 0;
 }

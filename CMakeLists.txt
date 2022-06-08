@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.20)
 
 project(MidnightEngine VERSION 0.1)
-
+find_package(OpenGL REQUIRED)
 add_executable(${PROJECT_NAME} 
     src/App.cpp
     src/App.h
@@ -62,6 +62,27 @@ add_executable(${PROJECT_NAME}
 
     #external executables
     external/glad/src/glad.c
+
+    #imgui
+    external/imgui/imconfig.h
+    external/imgui/imgui.cpp
+    external/imgui/imgui.h
+    external/imgui/imgui_demo.cpp
+    external/imgui/imgui_draw.cpp
+
+    external/imgui/imgui_impl_glfw.cpp
+    external/imgui/imgui_impl_glfw.h
+    external/imgui/imgui_impl_opengl3.cpp
+    external/imgui/imgui_impl_opengl3.h
+    external/imgui/imgui_internal.h
+
+    external/imgui/imgui_tables.cpp
+    external/imgui/imgui_widgets.cpp
+    external/imgui/imstb_rectpack.h
+    external/imgui/imstb_textedit.h
+    external/imgui/imstb_truetype.h
+    external/imgui/imgui_impl_opengl3_loader.h
+
 )
 
 add_subdirectory(external/glfw)
@@ -78,7 +99,7 @@ target_link_directories(${PROJECT_NAME}
     PRIVATE external/glfw/build/src
 )
 if (WIN32)
-    target_link_libraries(${PROJECT_NAME} glfw3)
+    target_link_libraries(${PROJECT_NAME} glfw3 ${OPENGL_LIBRARY})
 endif (WIN32)
 
 if (UNIX)
