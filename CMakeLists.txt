@@ -43,6 +43,18 @@ add_executable(${PROJECT_NAME}
     src/render/Shader.cpp
     src/render/GameObject.cpp
     src/render/GameObject.h
+    
+    #new update
+    src/render/Camera.cpp
+    src/render/Camera.h
+
+    src/render/EBO.h
+    src/render/Texture.cpp
+    src/render/Texture.h
+    src/render/VAO.cpp
+    src/render/VAO.h
+    src/render/VBO.cpp
+    src/render/VBO.h
         #ui
         src/render/UI/UI_manager.cpp
         src/render/UI/UI_manager.h
@@ -64,24 +76,24 @@ add_executable(${PROJECT_NAME}
     external/glad/src/glad.c
 
     #imgui
-    external/imgui/imconfig.h
-    external/imgui/imgui.cpp
-    external/imgui/imgui.h
-    external/imgui/imgui_demo.cpp
-    external/imgui/imgui_draw.cpp
+        external/imgui/imconfig.h
+        external/imgui/imgui.cpp
+        external/imgui/imgui.h
+        external/imgui/imgui_demo.cpp
+        external/imgui/imgui_draw.cpp
 
-    external/imgui/imgui_impl_glfw.cpp
-    external/imgui/imgui_impl_glfw.h
-    external/imgui/imgui_impl_opengl3.cpp
-    external/imgui/imgui_impl_opengl3.h
-    external/imgui/imgui_internal.h
+        external/imgui/imgui_impl_glfw.cpp
+        external/imgui/imgui_impl_glfw.h
+        external/imgui/imgui_impl_opengl3.cpp
+        external/imgui/imgui_impl_opengl3.h
+        external/imgui/imgui_internal.h
 
-    external/imgui/imgui_tables.cpp
-    external/imgui/imgui_widgets.cpp
-    external/imgui/imstb_rectpack.h
-    external/imgui/imstb_textedit.h
-    external/imgui/imstb_truetype.h
-    external/imgui/imgui_impl_opengl3_loader.h
+        external/imgui/imgui_tables.cpp
+        external/imgui/imgui_widgets.cpp
+        external/imgui/imstb_rectpack.h
+        external/imgui/imstb_textedit.h
+        external/imgui/imstb_truetype.h
+        external/imgui/imgui_impl_opengl3_loader.h
 
 )
 
