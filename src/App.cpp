@@ -23,6 +23,7 @@ int main()
 
     while (!MainWindow.WindowShouldClose())
     {
+        LOG_INFO("This is float = ", 10.55);
         MainWindow.ReceiveEvents();
         MainWindow.Render();
     }

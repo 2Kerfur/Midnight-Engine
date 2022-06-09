@@ -35,6 +35,4 @@ public:
     int GetWidth();
 
     int GetHeight();
-
-    //int EngineAddObj(GameObject *obj);
 };

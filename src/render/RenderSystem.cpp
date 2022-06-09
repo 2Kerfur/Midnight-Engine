@@ -1,6 +1,18 @@
 #include <filesystem>
 namespace fs = std::filesystem;
 
+#ifdef _WIN32 //TODO: Linux implementation for get dir
+#include <Windows.h>
+std::string GetCurrentDirectory()
+{
+	char buffer[MAX_PATH];
+	GetModuleFileNameA(NULL, buffer, MAX_PATH);
+	std::string::size_type pos = std::string(buffer).find_last_of("\\/");
+
+	return std::string(buffer).substr(0, pos);
+}
+#endif
+
 #include "RenderSystem.h"
 #include "glad/glad.h"
 #include "utils/log.h"
@@ -20,6 +32,8 @@ namespace fs = std::filesystem;
 #include"VAO.h"
 #include"VBO.h"
 #include"EBO.h"
+
+
 
 
 // Vertices coordinates
@@ -84,12 +98,13 @@ int RenderSystem::CompileShaders() //TODO: Fix image color from black & white to
 	VBO1.Unbind();
 	EBO1.Unbind();
 
-	std::string parentDir = (fs::current_path().fs::path::parent_path()).string();
-	//std::string texPath = "/resources/images/textures/";
+	std::string parentDir = GetCurrentDirectory();
+	std::replace(parentDir.begin(), parentDir.end(), '\\', '/');
+	std::string texPath = "/resources/images/textures/";
 	LOG_INFO(parentDir);
 	// Texture
 	//brickTex.Create((parentDir + texPath + "brick.png").c_str(), GL_TEXTURE_2D, GL_TEXTURE0, GL_RGBA, GL_UNSIGNED_BYTE);
-	brickTex.Create((parentDir + "brick.png").c_str(), GL_TEXTURE_2D, GL_TEXTURE0, GL_RGBA, GL_UNSIGNED_BYTE);
+	brickTex.Create((parentDir + texPath + "brick.png").c_str(), GL_TEXTURE_2D, GL_TEXTURE0, GL_RGBA, GL_UNSIGNED_BYTE);
 	brickTex.texUnit(shaderProgram, "tex0", 0);
 	glEnable(GL_DEPTH_TEST);
 
@@ -114,25 +129,22 @@ int RenderSystem::Add_Object(GameObject *gameObject)
 
 void RenderSystem::Render(GLFWwindow* window)
 {
-	if (Render_loaded && Shaders_compiled)
-	{
-		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
-		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-		//LOG_INFO("Screen cleared");
-		shaderProgram.Activate();
 
-		// Handles camera inputs
-		camera.Inputs(window);
-		// Updates and exports the camera matrix to the Vertex Shader
-		camera.Matrix(45.0f, 0.1f, 100.0f, shaderProgram, "camMatrix");
+	glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	//LOG_INFO("Screen cleared");
+	shaderProgram.Activate();
 
-		// Binds texture so that is appears in rendering
-		brickTex.Bind();
-		// Bind the VAO so OpenGL knows to use it
-		VAO1.Bind();
-		// Draw primitives, number of indices, datatype of indices, index of indices
-		glDrawElements(GL_TRIANGLES, sizeof(indices) / sizeof(int), GL_UNSIGNED_INT, 0);
-		// Swap the back buffer with he front buffer
-	}
-    
+	// Handles camera inputs
+	camera.Inputs(window);
+	// Updates and exports the camera matrix to the Vertex Shader
+	camera.Matrix(45.0f, 0.1f, 100.0f, shaderProgram, "camMatrix");
+
+	// Binds texture so that is appears in rendering
+	brickTex.Bind();
+	// Bind the VAO so OpenGL knows to use it
+	VAO1.Bind();
+	// Draw primitives, number of indices, datatype of indices, index of indices
+	glDrawElements(GL_TRIANGLES, sizeof(indices) / sizeof(int), GL_UNSIGNED_INT, 0);
+	// Swap the back buffer with he front buffer
 }
