@@ -42,6 +42,6 @@ public:
     void SetRenderSize(int width, int height);
 
     int Add_Object(GameObject *gameObject);
-    void Render();
+    void Render(GLFWwindow *window);
 };
 

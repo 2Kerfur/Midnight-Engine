@@ -112,7 +112,7 @@ int RenderSystem::Add_Object(GameObject *gameObject)
 	return 0;
 }
 
-void RenderSystem::Render()
+void RenderSystem::Render(GLFWwindow* window)
 {
 	if (Render_loaded && Shaders_compiled)
 	{
@@ -122,7 +122,7 @@ void RenderSystem::Render()
 		shaderProgram.Activate();
 
 		// Handles camera inputs
-		//camera.Inputs(window);
+		camera.Inputs(window);
 		// Updates and exports the camera matrix to the Vertex Shader
 		camera.Matrix(45.0f, 0.1f, 100.0f, shaderProgram, "camMatrix");
 

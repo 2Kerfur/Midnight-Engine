@@ -69,7 +69,7 @@ void Window::ReceiveEvents()
 
 void Window::Render()
 {
-    RenderEngine.Render();
+    RenderEngine.Render(window);
     glfwSwapBuffers(window);
 }
 
