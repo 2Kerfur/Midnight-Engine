@@ -13,12 +13,13 @@ int Window::InitWindow(int window_width, int window_height, std::string window_n
     Win_width = window_width;
     Win_height = window_height;
     Win_name = window_name;
-
+    
     if (!glfwInit())
         return -1;
 
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
     window = glfwCreateWindow(window_width, window_height, Win_name.c_str(), NULL, NULL); //create main window
     if (!window)

@@ -1,10 +1,6 @@
 #include <filesystem>
 namespace fs = std::filesystem;
 
-#include "imgui.h"
-#include "imgui_impl_glfw.h"
-#include "imgui_impl_opengl3.h"
-
 #include "RenderSystem.h"
 #include "glad/glad.h"
 #include "utils/log.h"
@@ -15,17 +11,16 @@ namespace fs = std::filesystem;
 
 //camera test
 #include "Camera.h"
-#include "glm/glm.hpp"
-#include "glm/gtc/matrix_transform.hpp"
-#include "glm/gtc/type_ptr.hpp"
-#include "glm/gtx/rotate_vector.hpp"
-#include "glm/gtx/vector_angle.hpp"
+#include<glm/glm.hpp>
+#include<glm/gtc/matrix_transform.hpp>
+#include<glm/gtc/type_ptr.hpp>
 
 #include"Texture.h"
 #include"Shader.h"
 #include"VAO.h"
 #include"VBO.h"
 #include"EBO.h"
+
 
 // Vertices coordinates
 GLfloat vertices[] =
@@ -47,8 +42,6 @@ GLuint indices[] =
 	2, 3, 4,
 	3, 0, 4
 };
-
-
 
 int RenderSystem::Init(int width, int height, GLFWwindow* window)
 {
@@ -72,16 +65,15 @@ int RenderSystem::Init(int width, int height, GLFWwindow* window)
 int RenderSystem::CompileShaders() //TODO: Fix image color from black & white to colorfull
 {
 	shaderProgram.Create("default.vert", "default.frag");
-
-
 	// Generates Vertex Array Object and binds it
 	
+	VAO1.Create();
 	VAO1.Bind();
 
 	// Generates Vertex Buffer Object and links it to vertices
 	VBO1.Create(vertices, sizeof(vertices));
 	// Generates Element Buffer Object and links it to indices
-	//EBO1.Create(indices, sizeof(indices));
+	EBO1.Create(indices, sizeof(indices));
 
 	// Links VBO attributes such as coordinates and colors to VAO
 	VAO1.LinkAttrib(VBO1, 0, 3, GL_FLOAT, 8 * sizeof(float), (void*)0);
@@ -90,19 +82,20 @@ int RenderSystem::CompileShaders() //TODO: Fix image color from black & white to
 	// Unbind all to prevent accidentally modifying them
 	VAO1.Unbind();
 	VBO1.Unbind();
-	//EBO1.Unbind();
+	EBO1.Unbind();
 
 	std::string parentDir = (fs::current_path().fs::path::parent_path()).string();
-	std::string texPath = "/resources/images/textures/";
-
+	//std::string texPath = "/resources/images/textures/";
+	LOG_INFO(parentDir);
 	// Texture
-	brickTex.Create((parentDir + texPath + "brick.png").c_str(), GL_TEXTURE_2D, GL_TEXTURE0, GL_RGBA, GL_UNSIGNED_BYTE);
+	//brickTex.Create((parentDir + texPath + "brick.png").c_str(), GL_TEXTURE_2D, GL_TEXTURE0, GL_RGBA, GL_UNSIGNED_BYTE);
+	brickTex.Create((parentDir + "brick.png").c_str(), GL_TEXTURE_2D, GL_TEXTURE0, GL_RGBA, GL_UNSIGNED_BYTE);
 	brickTex.texUnit(shaderProgram, "tex0", 0);
 	glEnable(GL_DEPTH_TEST);
 
 	// Creates camera object
 	camera.Create(Render_width, Render_height, glm::vec3(0.0f, 0.0f, 2.0f));
-
+	Shaders_compiled = true;
 	return 0;
 }
 
@@ -112,7 +105,6 @@ void RenderSystem::SetRenderSize(int width, int height)
 	Render_height = height;
 	glViewport(0, 0, width, height);
 }
-
 int RenderSystem::Add_Object(GameObject *gameObject)
 {
     //obj[Obj_count] = gameObject;
@@ -120,23 +112,27 @@ int RenderSystem::Add_Object(GameObject *gameObject)
 	return 0;
 }
 
-int RenderSystem::Render()
+void RenderSystem::Render()
 {
-    glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
-    glClear(GL_COLOR_BUFFER_BIT);
-	shaderProgram.Activate();
+	if (Render_loaded && Shaders_compiled)
+	{
+		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+		//LOG_INFO("Screen cleared");
+		shaderProgram.Activate();
 
-	// Handles camera inputs
-	//camera.Inputs(render_window);
-	// Updates and exports the camera matrix to the Vertex Shader
-	camera.Matrix(45.0f, 0.1f, 100.0f, shaderProgram, "camMatrix");
+		// Handles camera inputs
+		//camera.Inputs(window);
+		// Updates and exports the camera matrix to the Vertex Shader
+		camera.Matrix(45.0f, 0.1f, 100.0f, shaderProgram, "camMatrix");
 
-	// Binds texture so that is appears in rendering
-	brickTex.Bind();
-	// Bind the VAO so OpenGL knows to use it
-	VAO1.Bind();
-	// Draw primitives, number of indices, datatype of indices, index of indices
-	//glDrawElements(GL_TRIANGLES, sizeof(indices) / sizeof(int), GL_UNSIGNED_INT, 0);
-	// Swap the back buffer with the front buffer
-	return 0;
+		// Binds texture so that is appears in rendering
+		brickTex.Bind();
+		// Bind the VAO so OpenGL knows to use it
+		VAO1.Bind();
+		// Draw primitives, number of indices, datatype of indices, index of indices
+		glDrawElements(GL_TRIANGLES, sizeof(indices) / sizeof(int), GL_UNSIGNED_INT, 0);
+		// Swap the back buffer with he front buffer
+	}
+    
 }

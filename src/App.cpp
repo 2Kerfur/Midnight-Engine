@@ -15,10 +15,9 @@ int main()
     MainWindow.SetIcon("resources\\images\\icon.png");
 
     MainWindow.InitEngine();
+    //KeyboardInit(MainWindow.GetWindow());
 
-    KeyboardInit(MainWindow.GetWindow());
-
-    Audio TestAudio;
+    //Audio TestAudio;
     //TestAudio.EnginePlaySound("resources\\sounds\\bruh.wav");
 
 

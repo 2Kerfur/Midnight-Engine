@@ -1,5 +1,5 @@
 #include"Camera.h"
-
+#include "GLFW/glfw3.h"
 
 
 void Camera::Create(int width, int height, glm::vec3 position)
@@ -23,16 +23,16 @@ void Camera::Matrix(float FOVdeg, float nearPlane, float farPlane, Shader& shade
 	// Exports the camera matrix to the Vertex Shader
 	glUniformMatrix4fv(glGetUniformLocation(shader.ID, uniform), 1, GL_FALSE, glm::value_ptr(projection * view));
 }
-
-
-
+  
 void Camera::Inputs(GLFWwindow* window)
 {
-	//// Handles key inputs
-	//if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
-	//{
-	//	Position += speed * Orientation;
-	//}
+	// Handles key inputs
+	GLFWvidmode return_struct;
+	int width = 100;
+	int height = 100;
+	//glfwGetFramebufferSize(window, &width, &height);
+
+	//int height = return_struct.Height;
 	//if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
 	//{
 	//	Position += speed * -glm::normalize(glm::cross(Orientation, Up));

@@ -2,8 +2,6 @@
 #define GLFW_EXPOSE_NATIVE_WIN32
 
 #endif
-
-
 #ifndef WINDOWH
 #define WINDOWH
     #include "render/RenderSystem.h"
@@ -20,9 +18,8 @@ private:
     int Win_height;
     std::string Win_name = "Window";
     GLFWwindow* window;
-    
-public:
     RenderSystem RenderEngine;
+public:
     int InitWindow(int window_width, int window_height, std::string window_name);
     
     void SetIcon(std::string file_name);

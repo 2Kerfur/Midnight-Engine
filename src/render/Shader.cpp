@@ -20,9 +20,6 @@
 // Constructor that build the Shader Program from 2 different shaders
 void Shader::Create(const char* vertexFile, const char* fragmentFile)
 {
-	// Read vertexFile and fragmentFile and store the strings
-	//std::string vertexCode = get_file_contents(vertexFile);
-	//std::string fragmentCode = get_file_contents(fragmentFile);
 	std::string vertexCode = 
 		"#version 330 core\n"
 		"layout (location = 0) in vec3 aPos;\n"
@@ -30,13 +27,10 @@ void Shader::Create(const char* vertexFile, const char* fragmentFile)
 		"layout (location = 2) in vec2 aTex;\n"
 		"out vec3 color;\n"
 		"out vec2 texCoord;\n"
-		"uniform float scale;\n"
-		"uniform mat4 model;\n"
-		"uniform mat4 view;\n"
-		"uniform mat4 proj;\n"
+		"uniform mat4 camMatrix;\n"
 		"void main()\n"
 		"{\n"
-		"   gl_Position = proj * view * model * vec4(aPos, 1.0);\n"
+		"   gl_Position = camMatrix * vec4(aPos, 1.0);\n"
 		"   color = aColor;\n"
 		"   texCoord = aTex;\n"
 		"}\0";
@@ -86,7 +80,6 @@ void Shader::Create(const char* vertexFile, const char* fragmentFile)
 	// Delete the now useless Vertex and Fragment Shader objects
 	glDeleteShader(vertexShader);
 	glDeleteShader(fragmentShader);
-
 }
 
 // Activates the Shader Program

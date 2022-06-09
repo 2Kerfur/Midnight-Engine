@@ -2,6 +2,11 @@ cmake_minimum_required(VERSION 3.20)
 
 project(MidnightEngine VERSION 0.1)
 find_package(OpenGL REQUIRED)
+
+if(MSVC)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /std:c++17")
+endif(MSVC)
+
 add_executable(${PROJECT_NAME} 
     src/App.cpp
     src/App.h
@@ -49,6 +54,7 @@ add_executable(${PROJECT_NAME}
     src/render/Camera.h
 
     src/render/EBO.h
+    src/render/EBO.cpp
     src/render/Texture.cpp
     src/render/Texture.h
     src/render/VAO.cpp
