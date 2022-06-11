@@ -1,6 +1,3 @@
-
-
-
 #ifndef UI_IMAGE_H
 #define UI_IMAGE_H
 #include "render/UI/Objects/UI.h"
@@ -8,10 +5,11 @@
 class UI_Image : public UI
 {
 private:
-	float M_vertices[9] = {
-	-0.5f, -0.5f, 0.0f,
-	 0.5f, -0.5f, 0.0f,
-	 0.0f,  0.5f, 0.0f
+	float M_vertices[12] = {
+	 0.0f,  1.0f, 0.0f,  // top right
+	 0.0f, 0.0f, 0.0f,  // bottom right
+	-1.0f, 0.0f, 0.0f,  // bottom left
+	-1.0f,  1.0f, 0.0f   // top left 
 	};
 	unsigned int M_indices[6] = {  // note that we start from 0!
 		   0, 1, 3,  // first Triangle

@@ -112,7 +112,7 @@ int RenderSystem::CompileShaders() //TODO: Fix image color from black & white to
 
 	// Creates camera object
 	camera.Create(Render_width, Render_height, glm::vec3(0.0f, 0.0f, 2.0f));
-	Shaders_compiled = true;
+
 	for (int i = 0; Render_UI_Images_count > i; i++)
 	{
 		if (Render_UI_images[i]->Visible == true)
@@ -120,6 +120,8 @@ int RenderSystem::CompileShaders() //TODO: Fix image color from black & white to
 			Render_UI_images[i]->CompileShaders();
 		}
 	}
+	Shaders_compiled = true;
+	
 	return 0;
 }
 

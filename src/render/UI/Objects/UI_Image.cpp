@@ -21,9 +21,8 @@ int UI_Image::Create(int xPos, int yPos,
 	return 0;
 }
 
-int UI_Image::CompileShaders()
+int UI_Image::CompileShaders() //TODO: Fix memory leak
 {
-	glDisable(GL_DEPTH_TEST);
 	//-------------
 	M_vertexShader = glCreateShader(GL_VERTEX_SHADER);
 	glShaderSource(M_vertexShader, 1, &M_vertexShaderSource, NULL);
@@ -56,6 +55,7 @@ int UI_Image::CompileShaders()
 	glDeleteShader(M_vertexShader);
 	glDeleteShader(M_fragmentShader);
 	
+	
 	// bind the Vertex Array Object first, then bind and set vertex buffer(s), and then configure vertex attributes(s).
 	////-------------
 	return 0;
@@ -63,6 +63,7 @@ int UI_Image::CompileShaders()
 
 int UI_Image::BindProgram()
 {
+	
 	glGenVertexArrays(1, &M_VAO);
 	glGenBuffers(1, &M_VBO);
 	glGenBuffers(1, &M_EBO);
@@ -86,14 +87,10 @@ int UI_Image::Render()
 {
 	if (Is_Created)
 	{
-		//-------
-		
-		//-------
+		glClear(GL_DEPTH_BUFFER_BIT);
 		glUseProgram(M_shaderProgram);
-		glBindVertexArray(M_VAO); // seeing as we only have a single VAO there's no need to bind it every time, but we'll do so to keep things a bit more organized
-		//glDrawArrays(GL_TRIANGLES, 0, 6);
+		glBindVertexArray(M_VAO);
 		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
-		LOG_INFO("Image rendering");
 	}
 	else
 	{
