@@ -34,10 +34,8 @@ int main()
     RenderSystem* engine;
     engine = MainWindow.GetEngine();
     engine->AddGameObject(&image);
-
     while (!MainWindow.WindowShouldClose())
     {
-        //LOG_INFO("This is float = ", 10.55);
         MainWindow.ReceiveEvents();
         MainWindow.Render();
     }

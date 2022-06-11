@@ -46,7 +46,30 @@ GLfloat vertices[] =
 	 0.5f, 0.0f,  0.5f,     0.83f, 0.70f, 0.44f,	5.0f, 0.0f,
 	 0.0f, 0.8f,  0.0f,     0.92f, 0.86f, 0.76f,	2.5f, 5.0f
 };
-
+std::string vertexCode =
+"#version 330 core\n"
+"layout (location = 0) in vec3 aPos;\n"
+"layout (location = 1) in vec3 aColor;\n"
+"layout (location = 2) in vec2 aTex;\n"
+"out vec3 color;\n"
+"out vec2 texCoord;\n"
+"uniform mat4 camMatrix;\n"
+"void main()\n"
+"{\n"
+"   gl_Position = camMatrix * vec4(aPos, 1.0);\n"
+"   color = aColor;\n"
+"   texCoord = aTex;\n"
+"}\0";
+std::string fragmentCode =
+"#version 330 core\n"
+"out vec4 FragColor;\n"
+"in vec3 color;\n"
+"in vec2 texCoord;\n"
+"uniform sampler2D tex0;\n"
+"void main()\n"
+"{\n"
+"   FragColor = texture(tex0, texCoord);\n"
+"}\0";
 // Indices for vertices order
 GLuint indices[] =
 {
@@ -76,11 +99,10 @@ int RenderSystem::Init(int width, int height, GLFWwindow* window)
     render_window = window;
 	glViewport(0, 0, width, height);
 }
-
 int RenderSystem::CompileShaders() //TODO: Fix image color from black & white to colorfull
 {
 	
-	shaderProgram.Create("default.vert", "default.frag");
+	shaderProgram.Create(vertexCode, fragmentCode);
 	// Generates Vertex Array Object and binds it
 	
 	VAO1.Create();
@@ -100,13 +122,9 @@ int RenderSystem::CompileShaders() //TODO: Fix image color from black & white to
 	VBO1.Unbind();
 	EBO1.Unbind();
 
-	std::string parentDir = GetCurrentDirectory();
-	std::replace(parentDir.begin(), parentDir.end(), '\\', '/');
-	std::string texPath = "/resources/images/textures/";
-	LOG_INFO(parentDir);
-	// Texture
+
 	//brickTex.Create((parentDir + texPath + "brick.png").c_str(), GL_TEXTURE_2D, GL_TEXTURE0, GL_RGBA, GL_UNSIGNED_BYTE);
-	brickTex.Create((parentDir + texPath + "brick.png").c_str(), GL_TEXTURE_2D, GL_TEXTURE0, GL_RGBA, GL_UNSIGNED_BYTE);
+	brickTex.Create("brick.png", GL_TEXTURE_2D, GL_TEXTURE0, GL_RGBA, GL_UNSIGNED_BYTE);
 	brickTex.texUnit(shaderProgram, "tex0", 0);
 	glEnable(GL_DEPTH_TEST);
 

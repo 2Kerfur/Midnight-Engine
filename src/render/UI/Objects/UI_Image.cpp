@@ -1,7 +1,8 @@
 #include "UI_Image.h"
 #include "utils/log.h"
 #include "glad/glad.h"
-
+#include "render/Shader.h"
+#include <iostream>
 
 int UI_Image::Create(int xPos, int yPos, 
 	int width, int height,
@@ -21,43 +22,9 @@ int UI_Image::Create(int xPos, int yPos,
 	return 0;
 }
 
-int UI_Image::CompileShaders() //TODO: Fix memory leak
+int UI_Image::CompileShaders()
 {
-	//-------------
-	M_vertexShader = glCreateShader(GL_VERTEX_SHADER);
-	glShaderSource(M_vertexShader, 1, &M_vertexShaderSource, NULL);
-	glCompileShader(M_vertexShader);
-
-	int success;
-	char infoLog[512];
-	glGetShaderiv(M_vertexShader, GL_COMPILE_STATUS, &success);
-	if (!success)
-	{
-		glGetShaderInfoLog(M_vertexShader, 512, NULL, infoLog);
-	}
-
-	M_fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
-	glShaderSource(M_fragmentShader, 1, &M_fragmentShaderSource, NULL);
-	glCompileShader(M_fragmentShader);
-	glGetShaderiv(M_fragmentShader, GL_COMPILE_STATUS, &success);
-	if (!success)
-	{
-		glGetShaderInfoLog(M_fragmentShader, 512, NULL, infoLog);
-	}
-	M_shaderProgram = glCreateProgram();
-	glAttachShader(M_shaderProgram, M_vertexShader);
-	glAttachShader(M_shaderProgram, M_fragmentShader);
-	glLinkProgram(M_shaderProgram);
-	glGetProgramiv(M_shaderProgram, GL_LINK_STATUS, &success);
-	if (!success) {
-		glGetProgramInfoLog(M_shaderProgram, 512, NULL, infoLog);
-	}
-	glDeleteShader(M_vertexShader);
-	glDeleteShader(M_fragmentShader);
-	
-	
-	// bind the Vertex Array Object first, then bind and set vertex buffer(s), and then configure vertex attributes(s).
-	////-------------
+	shaderProgram.Create(vertexCode, fragmentCode);
 	return 0;
 }
 
@@ -76,10 +43,6 @@ int UI_Image::BindProgram()
 
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
 	glEnableVertexAttribArray(0);
-
-	glBindBuffer(GL_ARRAY_BUFFER, 0);
-
-	glBindVertexArray(0);
 	return 0;
 }
 
@@ -88,9 +51,14 @@ int UI_Image::Render()
 	if (Is_Created)
 	{
 		glClear(GL_DEPTH_BUFFER_BIT);
-		glUseProgram(M_shaderProgram);
+		shaderProgram.Activate();
 		glBindVertexArray(M_VAO);
 		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+
+		//Delete buffers
+		glDeleteVertexArrays(1, &M_VAO);
+		glDeleteBuffers(1, &M_VBO);
+		glDeleteBuffers(1, &M_EBO);
 	}
 	else
 	{

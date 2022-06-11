@@ -1,70 +1,20 @@
 #include"Shader.h"
 
-// Reads a text file and outputs a string with everything in the text file
-//std::string get_file_contents(const char* filename)
-//{
-//	std::ifstream in(filename, std::ios::binary);
-//	if (in)
-//	{
-//		std::string contents;
-//		in.seekg(0, std::ios::end);
-//		contents.resize(in.tellg());
-//		in.seekg(0, std::ios::beg);
-//		in.read(&contents[0], contents.size());
-//		in.close();
-//		return(contents);
-//	}
-//	throw(errno);
-//}
-
 // Constructor that build the Shader Program from 2 different shaders
-void Shader::Create(const char* vertexFile, const char* fragmentFile)
+void Shader::Create(std::string Vertex, std::string Fragment)
 {
-	std::string vertexCode = 
-		"#version 330 core\n"
-		"layout (location = 0) in vec3 aPos;\n"
-		"layout (location = 1) in vec3 aColor;\n"
-		"layout (location = 2) in vec2 aTex;\n"
-		"out vec3 color;\n"
-		"out vec2 texCoord;\n"
-		"uniform mat4 camMatrix;\n"
-		"void main()\n"
-		"{\n"
-		"   gl_Position = camMatrix * vec4(aPos, 1.0);\n"
-		"   color = aColor;\n"
-		"   texCoord = aTex;\n"
-		"}\0";
-	std::string fragmentCode = 
-		"#version 330 core\n"
-		"out vec4 FragColor;\n"
-		"in vec3 color;\n"
-		"in vec2 texCoord;\n"
-		"uniform sampler2D tex0;\n"
-		"void main()\n"
-		"{\n"
-		"   FragColor = texture(tex0, texCoord);\n"
-		"}\0";
 
-	// Convert the shader source strings into character arrays
-	const char* vertexSource = vertexCode.c_str();
-	const char* fragmentSource = fragmentCode.c_str();
+	const char* vertexSource = Vertex.c_str();
+	const char* fragmentSource = Fragment.c_str();
 
-	// Create Vertex Shader Object and get its reference
 	GLuint vertexShader = glCreateShader(GL_VERTEX_SHADER);
-	// Attach Vertex Shader source to the Vertex Shader Object
 	glShaderSource(vertexShader, 1, &vertexSource, NULL);
-	// Compile the Vertex Shader into machine code
 	glCompileShader(vertexShader);
-	// Checks if Shader compiled succesfully
 	compileErrors(vertexShader, "VERTEX");
 
-	// Create Fragment Shader Object and get its reference
 	GLuint fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
-	// Attach Fragment Shader source to the Fragment Shader Object
 	glShaderSource(fragmentShader, 1, &fragmentSource, NULL);
-	// Compile the Vertex Shader into machine code
 	glCompileShader(fragmentShader);
-	// Checks if Shader compiled succesfully
 	compileErrors(fragmentShader, "FRAGMENT");
 
 	// Create Shader Program Object and get its reference

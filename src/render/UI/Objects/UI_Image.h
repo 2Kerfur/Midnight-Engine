@@ -1,6 +1,7 @@
 #ifndef UI_IMAGE_H
 #define UI_IMAGE_H
 #include "render/UI/Objects/UI.h"
+#include "render/Shader.h"
 #include <string>
 class UI_Image : public UI
 {
@@ -16,13 +17,15 @@ private:
 		   1, 2, 3   // second Triangle
 	};
 	unsigned int M_VBO, M_VAO, M_EBO;
-	const char* M_vertexShaderSource = "#version 330 core\n"
+	std::string vertexCode =
+		"#version 330 core\n"
 		"layout (location = 0) in vec3 aPos;\n"
 		"void main()\n"
 		"{\n"
 		"   gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0);\n"
 		"}\0";
-	const char* M_fragmentShaderSource = "#version 330 core\n"
+	std::string fragmentCode =
+		"#version 330 core\n"
 		"out vec4 FragColor;\n"
 		"void main()\n"
 		"{\n"
@@ -34,6 +37,7 @@ private:
 
 
 	bool Is_Created = false;
+	Shader shaderProgram;
 public:
 	std::string obj_name;
 	int x_pos = 0;

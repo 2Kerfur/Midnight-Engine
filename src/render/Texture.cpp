@@ -1,20 +1,14 @@
 #include"Texture.h"
+#include "utils/loader/ResourceLoader.h"
 
-void Texture::Create(const char* image, GLenum texType, GLenum slot, GLenum format, GLenum pixelType)
+void Texture::Create(std::string path, GLenum texType, GLenum slot, GLenum format, GLenum pixelType)
 {
-	// Assigns the type of the texture ot the texture object
 	type = texType;
 
-	// Stores the width, height, and the number of color channels of the image
 	int widthImg, heightImg, numColCh;
-	// Flips the image so it appears right side up
-	stbi_set_flip_vertically_on_load(true);
-	// Reads the image from a file and stores it in bytes
-	unsigned char* bytes = stbi_load(image, &widthImg, &heightImg, &numColCh, 0);
-
+	unsigned char* bytes = LoadTexture(path, &widthImg, &heightImg, &numColCh);
 	// Generates an OpenGL texture object
 	glGenTextures(1, &ID);
-	// Assigns the texture to a Texture Unit
 	glActiveTexture(slot);
 	glBindTexture(texType, ID);
 

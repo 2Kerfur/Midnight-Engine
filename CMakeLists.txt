@@ -37,6 +37,9 @@ add_executable(${PROJECT_NAME}
     #UTILS
     src/utils/log.cpp
     src/utils/log.h
+        #loader
+        src/utils/loader/ResourceLoader.cpp
+        src/utils/loader/ResourceLoader.h
         #native
         src/utils/native/FileDialog.cpp
         src/utils/native/FileDialog.h
