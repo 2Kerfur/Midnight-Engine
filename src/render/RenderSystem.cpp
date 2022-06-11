@@ -33,7 +33,8 @@ std::string GetCurrentDirectory()
 #include"VBO.h"
 #include"EBO.h"
 
-
+#include "freetype/ft2build.h" //TODO: Text rendering implementation
+#include FT_FREETYPE_H
 
 
 // Vertices coordinates
@@ -78,6 +79,7 @@ int RenderSystem::Init(int width, int height, GLFWwindow* window)
 
 int RenderSystem::CompileShaders() //TODO: Fix image color from black & white to colorfull
 {
+	
 	shaderProgram.Create("default.vert", "default.frag");
 	// Generates Vertex Array Object and binds it
 	
@@ -111,6 +113,13 @@ int RenderSystem::CompileShaders() //TODO: Fix image color from black & white to
 	// Creates camera object
 	camera.Create(Render_width, Render_height, glm::vec3(0.0f, 0.0f, 2.0f));
 	Shaders_compiled = true;
+	for (int i = 0; Render_UI_Images_count > i; i++)
+	{
+		if (Render_UI_images[i]->Visible == true)
+		{
+			Render_UI_images[i]->CompileShaders();
+		}
+	}
 	return 0;
 }
 
@@ -120,8 +129,11 @@ void RenderSystem::SetRenderSize(int width, int height)
 	Render_height = height;
 	glViewport(0, 0, width, height);
 }
-int RenderSystem::Add_Object(GameObject *gameObject)
+int RenderSystem::AddGameObject(UI_Image* ui_image)
 {
+	LOG_INFO("Game object added");
+	Render_UI_images[Render_UI_Images_count] = ui_image;
+	Render_UI_Images_count += 1;
     //obj[Obj_count] = gameObject;
     //Obj_count += 1;
 	return 0;
@@ -135,16 +147,25 @@ void RenderSystem::Render(GLFWwindow* window)
 	//LOG_INFO("Screen cleared");
 	shaderProgram.Activate();
 
-	// Handles camera inputs
+
 	camera.Inputs(window);
-	// Updates and exports the camera matrix to the Vertex Shader
+
 	camera.Matrix(45.0f, 0.1f, 100.0f, shaderProgram, "camMatrix");
 
-	// Binds texture so that is appears in rendering
+	//Binds texture so that is appears in rendering
 	brickTex.Bind();
 	// Bind the VAO so OpenGL knows to use it
 	VAO1.Bind();
 	// Draw primitives, number of indices, datatype of indices, index of indices
 	glDrawElements(GL_TRIANGLES, sizeof(indices) / sizeof(int), GL_UNSIGNED_INT, 0);
-	// Swap the back buffer with he front buffer
+
+
+	for (int i = 0; Render_UI_Images_count > i; i++)
+	{
+		if (Render_UI_images[i]->Visible == true)
+		{
+			Render_UI_images[i]->BindProgram();
+			Render_UI_images[i]->Render();
+		}
+	}
 }

@@ -2,7 +2,7 @@
 #include <string>
 #include "spdlog/spdlog.h"
 
-int LoggerInit()
+int LoggerInit() //TODO: add support for multiple log threads ex: RENDER, CORE, PHYSICS, LOADER
 {
 
     return 0;

@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 3.20)
 project(MidnightEngine VERSION 0.1)
 find_package(OpenGL REQUIRED)
 
+
 if(MSVC)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /std:c++17")
 endif(MSVC)
@@ -10,6 +11,7 @@ endif(MSVC)
 add_executable(${PROJECT_NAME} 
     src/App.cpp
     src/App.h
+    src/Config.h
 
     #AUDIO
     src/audio/audio.cpp
@@ -80,6 +82,7 @@ add_executable(${PROJECT_NAME}
 
     #external executables
     external/glad/src/glad.c
+    external/freetype/ft2build.h
 
     #imgui
         external/imgui/imconfig.h
@@ -112,12 +115,14 @@ target_include_directories(${PROJECT_NAME}
     PUBLIC src
     PUBLIC external
     PUBLIC external/imgui
+    PUBLIC external/freetype
 )
 target_link_directories(${PROJECT_NAME}
     PRIVATE external/glfw/build/src
+    PRIVATE external/freetype
 )
 if (WIN32)
-    target_link_libraries(${PROJECT_NAME} glfw3 ${OPENGL_LIBRARY})
+    target_link_libraries(${PROJECT_NAME} glfw3 ${OPENGL_LIBRARY} freetype)
 endif (WIN32)
 
 if (UNIX)

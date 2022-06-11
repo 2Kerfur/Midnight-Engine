@@ -1,7 +1,8 @@
 #ifndef RENDERSYSTEM
 #define RENDERSYSTEM
     #include "Shader.h"
-    #include "GameObject.h"
+    #include "render/UI/Objects/UI_Image.h"    
+    //#include "GameObject.h"
     #include "GLFW/glfw3.h"
     
     #include "Shader.h"
@@ -10,8 +11,7 @@
     #include "EBO.h"
     #include "Camera.h"
     #include "Texture.h"
-#endif
-
+    
 class RenderSystem
 {
 private:
@@ -33,6 +33,9 @@ private:
     Shader shaderProgram;
     Texture brickTex;
 
+    //GameObjects to render
+    UI_Image *Render_UI_images[100];
+    int Render_UI_Images_count = 0;
 public:
     
     int Init(int width, int height, GLFWwindow* window);
@@ -41,7 +44,9 @@ public:
     
     void SetRenderSize(int width, int height);
 
-    int Add_Object(GameObject *gameObject);
+    int AddGameObject(UI_Image *gameObject);
+    
     void Render(GLFWwindow *window);
 };
 
+#endif

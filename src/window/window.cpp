@@ -79,3 +79,8 @@ int Window::InitEngine()
     RenderEngine.CompileShaders();
     return 0;
 }
+
+RenderSystem* Window::GetEngine()
+{
+    return &RenderEngine;
+};

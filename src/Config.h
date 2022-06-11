@@ -1,0 +1,2 @@
+#define ENGINE_DEBUG
+//#define ENGINE_RELEASE
