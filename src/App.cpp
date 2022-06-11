@@ -18,7 +18,7 @@
 int main()
 {
     Window MainWindow;
-    MainWindow.InitWindow(500, 500, "MidnightEngine");
+    MainWindow.InitWindow(800, 800, "MidnightEngine");
     MainWindow.SetIcon("resources\\images\\icon.png");
 
     MainWindow.InitEngine();

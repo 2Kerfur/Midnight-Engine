@@ -1,3 +1,8 @@
+#define IMGUI_IMPL_OPENGL_LOADER_GLAD
+#include "imgui.h"
+#include "imgui_impl_glfw.h"
+#include "imgui_impl_opengl3.h"
+
 #include "window.h"
 #define STB_IMAGE_IMPLEMENTATION
 
@@ -8,6 +13,9 @@
 #include "utils/log.h"
 #include <string>
 #include "stb/stb_image.h"
+
+
+
 int Window::InitWindow(int window_width, int window_height, std::string window_name)
 {
     Win_width = window_width;
@@ -28,6 +36,17 @@ int Window::InitWindow(int window_width, int window_height, std::string window_n
         return -1;
     }
     glfwMakeContextCurrent(window);
+    glfwSwapInterval(1);
+
+    //IMGUI
+    IMGUI_CHECKVERSION();
+    ImGui::CreateContext();
+    ImGuiIO& io = ImGui::GetIO(); (void)io;
+    ImGui::StyleColorsDark();
+    ImGui_ImplGlfw_InitForOpenGL(window, true);
+    ImGui_ImplOpenGL3_Init("#version 330");
+    //IMGUI
+    
     return 0;
 }
 void Window::SetIcon(std::string file_name)
@@ -70,6 +89,7 @@ void Window::ReceiveEvents()
 void Window::Render()
 {
     RenderEngine.Render(window);
+    
     glfwSwapBuffers(window);
 }
 

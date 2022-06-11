@@ -1,6 +1,10 @@
 #include <filesystem>
 namespace fs = std::filesystem;
 
+#include "imgui.h"
+#include "imgui_impl_glfw.h"
+#include "imgui_impl_opengl3.h"
+
 #ifdef _WIN32 //TODO: Linux implementation for get dir
 #include <Windows.h>
 std::string GetCurrentDirectory()
@@ -97,6 +101,7 @@ int RenderSystem::Init(int width, int height, GLFWwindow* window)
 		return 0;
 	}
     render_window = window;
+
 	glViewport(0, 0, width, height);
 }
 int RenderSystem::CompileShaders() //TODO: Fix image color from black & white to colorfull
@@ -161,12 +166,14 @@ int RenderSystem::AddGameObject(UI_Image* ui_image)
 
 void RenderSystem::Render(GLFWwindow* window)
 {
+	
 
 	glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	//LOG_INFO("Screen cleared");
 	shaderProgram.Activate();
 
+	
 
 	camera.Inputs(window);
 
@@ -179,6 +186,20 @@ void RenderSystem::Render(GLFWwindow* window)
 	// Draw primitives, number of indices, datatype of indices, index of indices
 	glDrawElements(GL_TRIANGLES, sizeof(indices) / sizeof(int), GL_UNSIGNED_INT, 0);
 
+
+	//IMGUI
+	ImGui_ImplOpenGL3_NewFrame();
+	ImGui_ImplGlfw_NewFrame();
+	ImGui::NewFrame();
+
+	ImGui::Begin("Hello, world!");                          // Create a window called "Hello, world!" and append into it.
+
+	ImGui::Text("This is some useful text.");
+	ImGui::End();
+
+	ImGui::Render();
+
+	ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 
 	for (int i = 0; Render_UI_Images_count > i; i++)
 	{
