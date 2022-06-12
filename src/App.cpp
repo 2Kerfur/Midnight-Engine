@@ -14,15 +14,16 @@
 #include<glad/glad.h>
 #include<GLFW/glfw3.h>
 
-
+//
 int main()
 {
+    //LOG_INIT();
     Window MainWindow;
     MainWindow.InitWindow(800, 800, "MidnightEngine");
     MainWindow.SetIcon("resources\\images\\icon.png");
 
     MainWindow.InitEngine();
-
+    
     UI_Image image;
     image.Create(100, 100, 100, 100, "testImage", "testPath");
     
@@ -31,6 +32,10 @@ int main()
 
     //Audio TestAudio;
     //TestAudio.EnginePlaySound("resources\\sounds\\bruh.wav");
+    //RENDER_LOG_TRACE("HI");
+    LOG_CRITICAL("String");
+    PHYSICS_LOG_CRITICAL("TEst", 1);
+
     RenderSystem* engine;
     engine = MainWindow.GetEngine();
     engine->AddGameObject(&image);

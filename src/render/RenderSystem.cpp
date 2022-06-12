@@ -1,4 +1,4 @@
-#include <filesystem>
+﻿#include <filesystem>
 namespace fs = std::filesystem;
 
 #include "imgui.h"
@@ -36,6 +36,9 @@ std::string GetCurrentDirectory()
 #include"VAO.h"
 #include"VBO.h"
 #include"EBO.h"
+
+#include <iostream>
+#include <stdio.h>
 
 #include "freetype/ft2build.h" //TODO: Text rendering implementation
 #include FT_FREETYPE_H
@@ -97,14 +100,18 @@ int RenderSystem::Init(int width, int height, GLFWwindow* window)
 	else
 	{
 		LOG_INFO("Glad OpenGL loaded successfully");
+		const GLubyte* render_card = glGetString(GL_RENDERER); //get render card info
+		const char* card = reinterpret_cast<const char*>(render_card); //convert it to char
+		std::string card_render = card; //convert to string
+		LOG_INFO("Graphics card model: " + card_render);
+
 		Render_loaded = true;
 		return 0;
 	}
-    render_window = window;
-
+	
 	glViewport(0, 0, width, height);
 }
-int RenderSystem::CompileShaders() //TODO: Fix image color from black & white to colorfull
+int RenderSystem::CompileShaders()
 {
 	
 	shaderProgram.Create(vertexCode, fragmentCode);
@@ -187,19 +194,7 @@ void RenderSystem::Render(GLFWwindow* window)
 	glDrawElements(GL_TRIANGLES, sizeof(indices) / sizeof(int), GL_UNSIGNED_INT, 0);
 
 
-	//IMGUI
-	ImGui_ImplOpenGL3_NewFrame();
-	ImGui_ImplGlfw_NewFrame();
-	ImGui::NewFrame();
-
-	ImGui::Begin("Hello, world!");                          // Create a window called "Hello, world!" and append into it.
-
-	ImGui::Text("This is some useful text.");
-	ImGui::End();
-
-	ImGui::Render();
-
-	ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+	
 
 	for (int i = 0; Render_UI_Images_count > i; i++)
 	{
@@ -209,4 +204,16 @@ void RenderSystem::Render(GLFWwindow* window)
 			Render_UI_images[i]->Render();
 		}
 	}
+
+	//IMGUI
+	ImGui_ImplOpenGL3_NewFrame();
+	ImGui_ImplGlfw_NewFrame();
+	ImGui::NewFrame();
+	ImGui::Begin("Engine Info");
+
+	ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
+	ImGui::End();
+	ImGui::Render();
+	ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+	//IMGUI
 }

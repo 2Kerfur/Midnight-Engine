@@ -35,6 +35,8 @@ int Window::InitWindow(int window_width, int window_height, std::string window_n
         glfwTerminate();
         return -1;
     }
+
+
     glfwMakeContextCurrent(window);
     glfwSwapInterval(1);
 
@@ -42,10 +44,13 @@ int Window::InitWindow(int window_width, int window_height, std::string window_n
     IMGUI_CHECKVERSION();
     ImGui::CreateContext();
     ImGuiIO& io = ImGui::GetIO(); (void)io;
+    //io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;
+    //io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable;
     ImGui::StyleColorsDark();
     ImGui_ImplGlfw_InitForOpenGL(window, true);
     ImGui_ImplOpenGL3_Init("#version 330");
     //IMGUI
+    
     
     return 0;
 }
