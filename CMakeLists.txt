@@ -66,6 +66,9 @@ add_executable(${PROJECT_NAME}
     src/render/VAO.h
     src/render/VBO.cpp
     src/render/VBO.h
+        #actors
+        src/render/Actors/Mesh.cpp
+        src/render/Actors/Mesh.h
         #ui
         src/render/UI/UI_manager.cpp
         src/render/UI/UI_manager.h
@@ -80,8 +83,14 @@ add_executable(${PROJECT_NAME}
             src/render/UI/Objects/UI.h
 
     #TOOLS
-    src/tools/imgui_test.cpp
-    src/tools/imgui_test.h
+    #spdlog
+    #"spdlog/sinks/stdout_sinks.h"
+    external/spdlog-1.10.0/include/spdlog/sinks/stdout_sinks.h
+    external/spdlog-1.10.0/include/spdlog/spdlog.h
+    external/spdlog-1.10.0/include/spdlog/sinks/stdout_color_sinks.h
+
+    #tools/imgui_test.cpp
+    #tools/imgui_test.h
 
     #external executables
     external/glad/src/glad.c

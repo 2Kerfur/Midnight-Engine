@@ -1,5 +1,5 @@
 #include"Shader.h"
-
+#include "utils/log.h"
 // Constructor that build the Shader Program from 2 different shaders
 void Shader::Create(std::string Vertex, std::string Fragment)
 {

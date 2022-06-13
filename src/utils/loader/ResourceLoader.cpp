@@ -38,6 +38,5 @@ unsigned char* LoadTexture(std::string path,
 	unsigned char* bytes;
 	stbi_set_flip_vertically_on_load(true);
 	bytes = stbi_load(image, width, height, numColch, 0);
-	LOG_INFO(finalPath);
 	return bytes;
 }

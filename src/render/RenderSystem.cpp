@@ -94,16 +94,17 @@ int RenderSystem::Init(int width, int height, GLFWwindow* window)
 	Render_height = height;
 	if (!gladLoadGL())
 	{
-		LOG_CRITICAL("Glad OpenGL loading error");
+		
+		RENDER_LOG_CRITICAL("Glad OpenGL loading error");
 		return -1;
 	}
 	else
 	{
-		LOG_INFO("Glad OpenGL loaded successfully");
+		RENDER_LOG_INFO("Glad OpenGL loaded successfully");
 		const GLubyte* render_card = glGetString(GL_RENDERER); //get render card info
 		const char* card = reinterpret_cast<const char*>(render_card); //convert it to char
 		std::string card_render = card; //convert to string
-		LOG_INFO("Graphics card model: " + card_render);
+		RENDER_LOG_INFO("Graphics card model: " + card_render);
 
 		Render_loaded = true;
 		return 0;
@@ -163,7 +164,6 @@ void RenderSystem::SetRenderSize(int width, int height)
 }
 int RenderSystem::AddGameObject(UI_Image* ui_image)
 {
-	LOG_INFO("Game object added");
 	Render_UI_images[Render_UI_Images_count] = ui_image;
 	Render_UI_Images_count += 1;
     //obj[Obj_count] = gameObject;
@@ -192,7 +192,6 @@ void RenderSystem::Render(GLFWwindow* window)
 	VAO1.Bind();
 	// Draw primitives, number of indices, datatype of indices, index of indices
 	glDrawElements(GL_TRIANGLES, sizeof(indices) / sizeof(int), GL_UNSIGNED_INT, 0);
-
 
 	
 

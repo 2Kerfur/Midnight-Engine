@@ -17,7 +17,7 @@
 //
 int main()
 {
-    //LOG_INIT();
+    LOG_INIT();
     Window MainWindow;
     MainWindow.InitWindow(800, 800, "MidnightEngine");
     MainWindow.SetIcon("resources\\images\\icon.png");
@@ -27,24 +27,19 @@ int main()
     UI_Image image;
     image.Create(100, 100, 100, 100, "testImage", "testPath");
     
-    //Engine.AddGameObject()
-    //KeyboardInit(MainWindow.GetWindow());
-
-    //Audio TestAudio;
-    //TestAudio.EnginePlaySound("resources\\sounds\\bruh.wav");
-    //RENDER_LOG_TRACE("HI");
-    LOG_CRITICAL("String");
-    PHYSICS_LOG_CRITICAL("TEst", 1);
-
+    
+    LOG_CRITICAL("Test");
     RenderSystem* engine;
     engine = MainWindow.GetEngine();
     engine->AddGameObject(&image);
+
     while (!MainWindow.WindowShouldClose())
     {
         MainWindow.ReceiveEvents();
         MainWindow.Render();
     }
     MainWindow.Close();
+    
 
     return 0;
 }

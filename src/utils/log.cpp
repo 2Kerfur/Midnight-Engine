@@ -1,35 +1,50 @@
 #include "log.h"
 #include <string>
 #include <iostream>
+#define SPDLOG_ACTIVE_LEVEL SPDLOG_LEVEL_TRACE
 #include "spdlog/spdlog.h"
-#include "spdlog/fmt/ostr.h" // must be included
+//#include "spdlog/fmt/ostr.h" // must be included
 #include "spdlog/sinks/stdout_sinks.h"
 #include <spdlog/sinks/stdout_color_sinks.h>
-#include "spdlog/sinks/dup_filter_sink.h" //TODO: implement anti spam filter for messages
+//#include "spdlog/sinks/dup_filter_sink.h" //TODO: implement anti spam filter for messages
 
-#include "spdlog/pattern_formatter.h"
+//#include "spdlog/pattern_formatter.h"
 
 bool LoggerInit = false;
 //std::shared_ptr<spdlog::logger> render_console;
+
+
 auto engine_console = spdlog::stdout_color_mt("ENGINE");
+
 auto render_console = spdlog::stdout_color_mt("RENDER");
 auto loader_console = spdlog::stdout_color_mt("LOADER");
 auto physics_console = spdlog::stdout_color_mt("PHYSICS");
 auto core_console = spdlog::stdout_color_mt("CORE");
 auto shader_console = spdlog::stdout_color_mt("SHADER");
 
+
 //spdlog::register_logger(core_console);
 //LoggerInit = true;
 std::string message;
 void Log_init()
 {
+    //spdlog::set_default_logger(engine_console);
+    //spdlog::set_pattern("%s %! %# %v");
     
+}
+
+void Log_Line()
+{
     
-    
+}
+
+void PrintDebugLine()
+{
+    std::cout << __FILE__ << std::endl;
 }
 //ENGINE
     //string
-    void engine_log_trace(std::string message) { engine_console->trace(message); }
+void engine_log_trace(std::string message) { engine_console->trace(message); }
     void engine_log_info(std::string message) { engine_console->info(message); }
     void engine_log_warn(std::string message) { engine_console->warn(message); }
     void engine_log_error(std::string message) { engine_console->error(message); }

@@ -4,10 +4,13 @@
 #include "render/Shader.h"
 #include <iostream>
 
+
+
 int UI_Image::Create(int xPos, int yPos, 
 	int width, int height,
 	std::string name, std::string image_path)
 {
+
 	x_pos = xPos;
 	y_pos = yPos;
 	obj_width = width;
@@ -24,13 +27,12 @@ int UI_Image::Create(int xPos, int yPos,
 
 int UI_Image::CompileShaders()
 {
-	shaderProgram.Create(vertexCode, fragmentCode);
+	shaderProg.Create(vertexCode, fragmentCode);
 	return 0;
 }
 
 int UI_Image::BindProgram()
 {
-	
 	glGenVertexArrays(1, &M_VAO);
 	glGenBuffers(1, &M_VBO);
 	glGenBuffers(1, &M_EBO);
@@ -43,6 +45,11 @@ int UI_Image::BindProgram()
 
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
 	glEnableVertexAttribArray(0);
+
+	glBindBuffer(GL_ARRAY_BUFFER, 0);
+	glBindVertexArray(0);
+	//glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+	
 	return 0;
 }
 
@@ -51,7 +58,7 @@ int UI_Image::Render()
 	if (Is_Created)
 	{
 		glClear(GL_DEPTH_BUFFER_BIT);
-		shaderProgram.Activate();
+		shaderProg.Activate();
 		glBindVertexArray(M_VAO);
 		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 
@@ -59,9 +66,14 @@ int UI_Image::Render()
 		glDeleteVertexArrays(1, &M_VAO);
 		glDeleteBuffers(1, &M_VBO);
 		glDeleteBuffers(1, &M_EBO);
+
+		//std::string filename = __FILE__;
+		//std::cout << __FILE__ << " Line = " << __LINE__ << std::endl;
+	
 	}
 	else
 	{
+		
 		LOG_ERROR("Object: " + obj_name + " was not created"); 
 	}
 	return 0;
