@@ -18,8 +18,8 @@ add_executable(${PROJECT_NAME}
     src/audio/audio.h
 
     #WINDOW
-    src/window/window.cpp
-    src/window/window.h
+    src/window/Window.cpp
+    src/window/Window.h
         #events
         src/window/events/EventSystem.cpp
         src/window/events/EventSystem.h

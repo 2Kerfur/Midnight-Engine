@@ -1,5 +1,5 @@
 #include <iostream>
-#include "window/window.h"
+#include "window/Window.h"
 
 #include "utils/log.h"
 #include "render/UI/Objects/UI_Image.h" //ui
@@ -28,7 +28,7 @@ int main()
     image.Create(100, 100, 100, 100, "testImage", "testPath");
     
     
-    LOG_CRITICAL("Test");
+    //LOG_CRITICAL("Test");
     RenderSystem* engine;
     engine = MainWindow.GetEngine();
     engine->AddGameObject(&image);

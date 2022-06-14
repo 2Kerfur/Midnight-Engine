@@ -96,7 +96,7 @@ int RenderSystem::Init(int width, int height, GLFWwindow* window)
 	{
 		
 		RENDER_LOG_CRITICAL("Glad OpenGL loading error");
-		return -1;
+		return 1;
 	}
 	else
 	{
@@ -105,12 +105,10 @@ int RenderSystem::Init(int width, int height, GLFWwindow* window)
 		const char* card = reinterpret_cast<const char*>(render_card); //convert it to char
 		std::string card_render = card; //convert to string
 		RENDER_LOG_INFO("Graphics card model: " + card_render);
-
 		Render_loaded = true;
+		glViewport(0, 0, width, height);
 		return 0;
 	}
-	
-	glViewport(0, 0, width, height);
 }
 int RenderSystem::CompileShaders()
 {
