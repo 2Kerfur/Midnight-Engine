@@ -1,4 +1,5 @@
 #include"Shader.h"
+#include <string>
 #include "utils/log.h"
 // Constructor that build the Shader Program from 2 different shaders
 void Shader::Create(std::string Vertex, std::string Fragment)
@@ -32,24 +33,19 @@ void Shader::Create(std::string Vertex, std::string Fragment)
 	glDeleteShader(fragmentShader);
 }
 
-// Activates the Shader Program
 void Shader::Activate()
 {
 	glUseProgram(ID);
 }
 
-// Deletes the Shader Program
 void Shader::Delete()
 {
 	glDeleteProgram(ID);
 }
 
-// Checks if the different Shaders have compiled properly
 void Shader::compileErrors(unsigned int shader, const char* type)
 {
-	// Stores status of compilation
 	GLint hasCompiled;
-	// Character array to store error message in
 	char infoLog[1024];
 	if (type != "PROGRAM")
 	{
@@ -57,7 +53,7 @@ void Shader::compileErrors(unsigned int shader, const char* type)
 		if (hasCompiled == GL_FALSE)
 		{
 			glGetShaderInfoLog(shader, 1024, NULL, infoLog);
-			std::cout << "SHADER_COMPILATION_ERROR for:" << type << "\n" << infoLog << std::endl;
+			SHADER_LOG_ERROR("SHADER_COMPILATION_ERROR for:" + std::string(infoLog));
 		}
 	}
 	else
@@ -66,7 +62,7 @@ void Shader::compileErrors(unsigned int shader, const char* type)
 		if (hasCompiled == GL_FALSE)
 		{
 			glGetProgramInfoLog(shader, 1024, NULL, infoLog);
-			std::cout << "SHADER_LINKING_ERROR for:" << type << "\n" << infoLog << std::endl;
+			SHADER_LOG_ERROR("SHADER_LINKING_ERROR for:" + std::string(infoLog));
 		}
 	}
 }

@@ -1,6 +1,7 @@
 #include "ResourceLoader.h"
 #include<stb/stb_image.h>
 #include "utils/log.h"
+#include <fstream>
 #include <filesystem>
 
 #ifdef _WIN32 //TODO: Linux implementation for get dir
@@ -15,13 +16,19 @@ std::string GetCurrentDir()
 }
 #endif
 
-std::string LoadShader(std::string path)
+std::string LoadShader(std::string path) //TODO: Create linux implementation
 {
 	std::string Shader;
+	std::string finalPath;
+	std::string parentDir = GetCurrentDir();
+	std::replace(parentDir.begin(), parentDir.end(), '\\', '/');
+	std::string texPath = "/resources/shaders/";
+	finalPath = (parentDir + texPath + path);
 
-
-
-	return Shader;
+	std::string file_content;
+	std::getline(std::ifstream(finalPath), file_content, '\0');
+	
+	return file_content;
 }
 
 //LoadFiles in /resources/images/textures/ dir 

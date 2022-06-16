@@ -109,6 +109,7 @@ int RenderSystem::Init(int width, int height, GLFWwindow* window)
 		glViewport(0, 0, width, height);
 		return 0;
 	}
+	
 }
 int RenderSystem::CompileShaders()
 {
@@ -133,11 +134,9 @@ int RenderSystem::CompileShaders()
 	VBO1.Unbind();
 	EBO1.Unbind();
 
-
 	//brickTex.Create((parentDir + texPath + "brick.png").c_str(), GL_TEXTURE_2D, GL_TEXTURE0, GL_RGBA, GL_UNSIGNED_BYTE);
 	brickTex.Create("brick.png", GL_TEXTURE_2D, GL_TEXTURE0, GL_RGBA, GL_UNSIGNED_BYTE);
 	brickTex.texUnit(shaderProgram, "tex0", 0);
-	glEnable(GL_DEPTH_TEST);
 
 	// Creates camera object
 	camera.Create(Render_width, Render_height, glm::vec3(0.0f, 0.0f, 2.0f));
@@ -164,22 +163,34 @@ int RenderSystem::AddGameObject(UI_Image* ui_image)
 {
 	Render_UI_images[Render_UI_Images_count] = ui_image;
 	Render_UI_Images_count += 1;
+	//CompileShaders(); //TODO: remove this shit
     //obj[Obj_count] = gameObject;
     //Obj_count += 1;
 	return 0;
 }
-
+float Transp;
 void RenderSystem::Render(GLFWwindow* window)
 {
 	
-
+	glEnable(GL_DEPTH_TEST);
 	glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+	//IMGUI
+	ImGui_ImplOpenGL3_NewFrame();
+	ImGui_ImplGlfw_NewFrame();
+	ImGui::NewFrame();
+	ImGui::Begin("Engine Stat");
+	
+	ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
+	Render_UI_images[0]->SetTransparency(Transp);
+	ImGui::SliderFloat("float", &Transp, 0.0f, 1.0f);
+	ImGui::End();
+	//IMGUI
+
+
 	//LOG_INFO("Screen cleared");
 	shaderProgram.Activate();
-
-	
-
 	camera.Inputs(window);
 
 	camera.Matrix(45.0f, 0.1f, 100.0f, shaderProgram, "camMatrix");
@@ -195,21 +206,18 @@ void RenderSystem::Render(GLFWwindow* window)
 
 	for (int i = 0; Render_UI_Images_count > i; i++)
 	{
-		if (Render_UI_images[i]->Visible == true)
+		if (Render_UI_images[i]->Is_Created)
 		{
-			Render_UI_images[i]->BindProgram();
-			Render_UI_images[i]->Render();
+			if (Render_UI_images[i]->Visible)
+			{
+				Render_UI_images[i]->BindProgram();
+				Render_UI_images[i]->Render();
+			}
 		}
 	}
 
 	//IMGUI
-	ImGui_ImplOpenGL3_NewFrame();
-	ImGui_ImplGlfw_NewFrame();
-	ImGui::NewFrame();
-	ImGui::Begin("Engine Info");
-
-	ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
-	ImGui::End();
+	
 	ImGui::Render();
 	ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 	//IMGUI

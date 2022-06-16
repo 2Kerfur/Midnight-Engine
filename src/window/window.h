@@ -32,7 +32,7 @@ public:
     int InitEngine();
     int Close();
     int GetWidth();
-
+    int CompileShaders();
     RenderSystem* GetEngine();
   
     int GetHeight();

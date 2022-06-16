@@ -14,10 +14,12 @@
 #include<glad/glad.h>
 #include<GLFW/glfw3.h>
 
+
+
 //
 int main()
 {
-    LOG_INIT();
+    //LOG_INIT();
     Window MainWindow;
     MainWindow.InitWindow(800, 800, "MidnightEngine");
     MainWindow.SetIcon("resources\\images\\icon.png");
@@ -27,12 +29,11 @@ int main()
     UI_Image image;
     image.Create(100, 100, 100, 100, "testImage", "testPath");
     
-    
-    //LOG_CRITICAL("Test");
     RenderSystem* engine;
     engine = MainWindow.GetEngine();
     engine->AddGameObject(&image);
 
+    MainWindow.CompileShaders();
     while (!MainWindow.WindowShouldClose())
     {
         MainWindow.ReceiveEvents();

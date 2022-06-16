@@ -183,66 +183,66 @@ void shader_log_critical(std::string message_1, double message_2);
 #define LOG_WARN(message_1, ...)       engine_log_warn(message_1, __VA_ARGS__)
 #define LOG_ERROR(message_1, ...)     engine_log_error(message_1, __VA_ARGS__)
 
-#ifdef ON_CRITICAL_DO_ASSERTE
-#define LOG_CRITICAL(message_1, ...)   engine_log_critical(message_1, __VA_ARGS__);_ASSERTE(0)
-#else
+//#ifdef ON_CRITICAL_DO_ASSERTE
+//#define LOG_CRITICAL(message_1, ...)   engine_log_critical(message_1, __VA_ARGS__);_ASSERTE(0)
+//#else
 #define LOG_CRITICAL(message_1, ...)   engine_log_critical(message_1, __VA_ARGS__);
-#endif
+//#endif
 
 #define RENDER_LOG_TRACE(message_1, ...)     render_log_trace(message_1, __VA_ARGS__)
 #define RENDER_LOG_INFO(message_1, ...)      render_log_info(message_1, __VA_ARGS__)
 #define RENDER_LOG_WARN(message_1, ...)       render_log_warn(message_1, __VA_ARGS__)
 #define RENDER_LOG_ERROR(message_1, ...)     render_log_error(message_1, __VA_ARGS__)
 
-#ifdef ON_CRITICAL_DO_ASSERTE
-#define RENDER_LOG_CRITICAL(message_1, ...)   render_log_critical(message_1, __VA_ARGS__);_ASSERTE(0)
-#else
+//#ifdef ON_CRITICAL_DO_ASSERTE
+//#define RENDER_LOG_CRITICAL(message_1, ...)   render_log_critical(message_1, __VA_ARGS__);_ASSERTE(0)
+//#else
 #define RENDER_LOG_CRITICAL(message_1, ...)   render_log_critical(message_1, __VA_ARGS__)
-#endif
+//#endif
 
 #define LOADER_LOG_TRACE(message_1, ...)     loader_log_trace(message_1, __VA_ARGS__)
 #define LOADER_LOG_INFO(message_1, ...)      loader_log_info(message_1, __VA_ARGS__)
 #define LOADER_LOG_WARN(message_1, ...)       loader_log_warn(message_1, __VA_ARGS__)
 #define LOADER_LOG_ERROR(message_1, ...)     loader_log_error(message_1, __VA_ARGS__)
 
-#ifdef ON_CRITICAL_DO_ASSERTE
-#define LOADER_LOG_CRITICAL(message_1, ...)   loader_log_critical(message_1, __VA_ARGS__);_ASSERTE(0)
-#else 
+//#ifdef ON_CRITICAL_DO_ASSERTE
+//#define LOADER_LOG_CRITICAL(message_1, ...)   loader_log_critical(message_1, __VA_ARGS__);_ASSERTE(0)
+//#else 
 #define LOADER_LOG_CRITICAL(message_1, ...)   loader_log_critical(message_1, __VA_ARGS__)
-#endif
+//#endif
 
 #define PHYSICS_LOG_TRACE(message_1, ...)     physics_log_trace(message_1, __VA_ARGS__)
 #define PHYSICS_LOG_INFO(message_1, ...)      physics_log_info(message_1, __VA_ARGS__)
 #define PHYSICS_LOG_WARN(message_1, ...)       physics_log_warn(message_1, __VA_ARGS__)
 #define PHYSICS_LOG_ERROR(message_1, ...)     physics_log_error(message_1, __VA_ARGS__)
 
-#ifdef ON_CRITICAL_DO_ASSERTE
-#define PHYSICS_LOG_CRITICAL(message_1, ...)   physics_log_critical(message_1, __VA_ARGS__);_ASSERTE(0)
-#else
+//#ifdef ON_CRITICAL_DO_ASSERTE
+//#define PHYSICS_LOG_CRITICAL(message_1, ...)   physics_log_critical(message_1, __VA_ARGS__);_ASSERTE(0)
+//#else
 #define PHYSICS_LOG_CRITICAL(message_1, ...)   physics_log_critical(message_1, __VA_ARGS__)
-#endif
+//#endif
 
 #define CORE_LOG_TRACE(message_1, ...)     core_log_trace(message_1, __VA_ARGS__)
 #define CORE_LOG_INFO(message_1, ...)      core_log_info(message_1, __VA_ARGS__)
 #define CORE_LOG_WARN(message_1, ...)       core_log_warn(message_1, __VA_ARGS__)
 #define CORE_LOG_ERROR(message_1, ...)     core_log_error(message_1, __VA_ARGS__)
 
-#ifdef ON_CRITICAL_DO_ASSERTE
-#define CORE_LOG_CRITICAL(message_1, ...)   core_log_critical(message_1, __VA_ARGS__);_ASSERTE(0)
-#else
+//#ifdef ON_CRITICAL_DO_ASSERTE
+//#define CORE_LOG_CRITICAL(message_1, ...)   core_log_critical(message_1, __VA_ARGS__);_ASSERTE(0)
+//#else
 #define CORE_LOG_CRITICAL(message_1, ...)   core_log_critical(message_1, __VA_ARGS__)
-#endif
+//#endif
 
 #define SHADER_LOG_TRACE(message_1, ...)     shader_log_trace(message_1, __VA_ARGS__)
 #define SHADER_LOG_INFO(message_1, ...)      shader_log_info(message_1, __VA_ARGS__)
 #define SHADER_LOG_WARN(message_1, ...)       shader_log_warn(message_1, __VA_ARGS__)
 #define SHADER_LOG_ERROR(message_1, ...)     shader_log_error(message_1, __VA_ARGS__)
 
-#ifdef ON_CRITICAL_DO_ASSERTE
-#define SHADER_LOG_CRITICAL(message_1, ...)   shader_log_critical(message_1, __VA_ARGS__);_ASSERTE(0)
-#else
+//#ifdef ON_CRITICAL_DO_ASSERTE
+//#define SHADER_LOG_CRITICAL(message_1, ...)   shader_log_critical(message_1, __VA_ARGS__);_ASSERTE(0)
+//#else
 #define SHADER_LOG_CRITICAL(message_1, ...)   shader_log_critical(message_1, __VA_ARGS__)
-#endif
+//#endif
 
 #endif
 

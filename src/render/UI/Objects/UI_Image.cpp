@@ -4,7 +4,7 @@
 #include "render/Shader.h"
 #include <iostream>
 
-
+#include "utils/loader/ResourceLoader.h"
 
 int UI_Image::Create(int xPos, int yPos, 
 	int width, int height,
@@ -17,22 +17,36 @@ int UI_Image::Create(int xPos, int yPos,
 	obj_height = height;
 	obj_name = name;
 
-	//-------------
-
-	////-------------
-
 	Is_Created = true;
 	return 0;
+}
+void UI_Image::SetPos(float x, float y)
+{
+	//M_vertices[0] = x;
+	//M_vertices[1] = y;
+}
+
+void UI_Image::SetTransparency(float value)
+{
+	if (0 <= value <= 1)
+	{
+		Transparency = value;
+		GLint nAlphaLocation = glGetUniformLocation(shaderProg.ID, "AlphaValue");
+		glUniform1f(nAlphaLocation, Transparency);
+	}
 }
 
 int UI_Image::CompileShaders()
 {
-	shaderProg.Create(vertexCode, fragmentCode);
+	shaderProg.Create(
+		LoadShader("default_ui.vert"),
+		LoadShader("default_ui.frag"));
 	return 0;
 }
 
 int UI_Image::BindProgram()
 {
+	//VAO1.Bind();
 	glGenVertexArrays(1, &M_VAO);
 	glGenBuffers(1, &M_VBO);
 	glGenBuffers(1, &M_EBO);
@@ -57,6 +71,8 @@ int UI_Image::Render()
 {
 	if (Is_Created)
 	{
+		glEnable(GL_BLEND); //to render transparent images
+		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 		glClear(GL_DEPTH_BUFFER_BIT);
 		shaderProg.Activate();
 		glBindVertexArray(M_VAO);
@@ -67,14 +83,12 @@ int UI_Image::Render()
 		glDeleteBuffers(1, &M_VBO);
 		glDeleteBuffers(1, &M_EBO);
 
-		//std::string filename = __FILE__;
-		//std::cout << __FILE__ << " Line = " << __LINE__ << std::endl;
-	
+		glDisable(GL_BLEND);
 	}
 	else
 	{
 		
-		LOG_ERROR("Object: " + obj_name + " was not created"); 
+		RENDER_LOG_ERROR("Object: " + obj_name + " was not created"); 
 	}
 	return 0;
 }

@@ -3,6 +3,11 @@
 #include "render/UI/Objects/UI.h"
 #include "render/Shader.h"
 #include <string>
+
+#include"render/VAO.h"
+#include"render/VBO.h"
+#include"render/EBO.h"
+
 class UI_Image : public UI
 {
 private:
@@ -16,29 +21,18 @@ private:
 		   0, 1, 3,  // first Triangle
 		   1, 2, 3   // second Triangle
 	};
+	VAO VAO1;
+	VBO VBO1;
+	EBO EBO1;
+	Shader shaderProg;
+
 	unsigned int M_VBO, M_VAO, M_EBO;
-	std::string vertexCode =
-		"#version 330 core\n"
-		"layout (location = 0) in vec3 aPos;\n"
-		"void main()\n"
-		"{\n"
-		"   gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0);\n"
-		"}\0";
-	std::string fragmentCode =
-		"#version 330 core\n"
-		"out vec4 FragColor;\n"
-		"void main()\n"
-		"{\n"
-		"   FragColor = vec4(0.0f, 0.5f, 0.2f, 1.0f);\n"
-		"}\n\0";
 	unsigned int M_vertexShader;
 	unsigned int M_fragmentShader;
 	unsigned int M_shaderProgram;
-
-
-	bool Is_Created = false;
-	Shader shaderProg;
+	float Transparency;
 public:
+	bool Is_Created = false;
 	std::string obj_name;
 	int x_pos = 0;
 	int y_pos = 0;
@@ -46,8 +40,10 @@ public:
 	int obj_height = 0;
 	bool Visible = true;
 	int Create(int xPos, int yPos, int width, int height, std::string name, std::string image_path);
+	void SetPos(float x, float y);
 	int CompileShaders();
 	int BindProgram();
 	int Render();
+	void SetTransparency(float value);
 };
 #endif

@@ -16,7 +16,6 @@
 #include "stb/stb_image.h"
 
 
-
 int Window::InitWindow(int window_width, int window_height, std::string window_name)
 {
     Win_width = window_width;
@@ -56,6 +55,7 @@ int Window::InitWindow(int window_width, int window_height, std::string window_n
     
     return 0;
 }
+
 void Window::SetIcon(std::string file_name)
 {
 #ifdef _WIN32 //TODO: Create set icon implementation for linux
@@ -71,21 +71,27 @@ void Window::SetIcon(std::string file_name)
     glfwSetWindowIcon(window, 1, images); //set icon
     stbi_image_free(images[0].pixels); //free memory
 }
+
 int Window::GetWidth() { return Win_width;}
+
 int Window::GetHeight() { return Win_height;}
+
 int Window::Close()
 {
     glfwTerminate();
     return 0;
 }
+
 GLFWwindow* Window::GetWindow()
 {
     return window;
 }
+
 int Window::WindowShouldClose()
 {
     return glfwWindowShouldClose(window);
 }
+
 void Window::ReceiveEvents()
 {
     glfwPollEvents();
@@ -106,21 +112,28 @@ int Window::InitEngine()
     if (!code)
     {
         LOG_INFO("Engine successfully initialized. Code: {}", code);
+        return 0;
     }
     else
     {
         LOG_INFO("Engine initialization error. Code: {}", code);
-    }
-    code = RenderEngine.CompileShaders();
+        return 1;
+    }   
+}
+
+int Window::CompileShaders()
+{
+    int code = RenderEngine.CompileShaders();
     if (!code)
     {
         LOG_INFO("Shader compilation success: {}", code);
+        return 0;
     }
     else
     {
         LOG_INFO("Shader compilation failed. Code: {}", code);
+        return 1;
     }
-    return 0;
 }
 
 RenderSystem* Window::GetEngine()
