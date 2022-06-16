@@ -11,11 +11,18 @@
 class UI_Image : public UI
 {
 private:
-	float M_vertices[12] = {
-	-0.5f,  1.0f, 0.0f,  // top right
-	-0.5f, 0.85f, 0.0f,  // bottom right
-	-1.0f, 0.85f, 0.0f,  // bottom left
-	-1.0f,  1.0f, 0.0f   // top left 
+	//float M_vertices[12] = {
+	//-0.5f,  1.0f, 0.0f,  // top right
+	//-0.5f, 0.85f, 0.0f,  // bottom right
+	//-1.0f, 0.85f, 0.0f,  // bottom left
+	//-1.0f,  1.0f, 0.0f   // top left 
+	//};
+	float M_vertices[32] = {
+		// positions          // colors           // texture coords
+		 0.5f,  0.5f, 0.0f,   1.0f, 0.0f, 0.0f,   1.0f, 1.0f,   // top right
+		 0.5f, -0.5f, 0.0f,   0.0f, 1.0f, 0.0f,   1.0f, 0.0f,   // bottom right
+		-0.5f, -0.5f, 0.0f,   0.0f, 0.0f, 1.0f,   0.0f, 0.0f,   // bottom left
+		-0.5f,  0.5f, 0.0f,   1.0f, 1.0f, 0.0f,   0.0f, 1.0f    // top left 
 	};
 	unsigned int M_indices[6] = {  // note that we start from 0!
 		   0, 1, 3,  // first Triangle
@@ -25,6 +32,7 @@ private:
 	VBO VBO1;
 	EBO EBO1;
 	Shader shaderProg;
+	unsigned int texture1; //
 
 	unsigned int M_VBO, M_VAO, M_EBO;
 	unsigned int M_vertexShader;
