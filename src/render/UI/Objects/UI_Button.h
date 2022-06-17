@@ -24,6 +24,8 @@ private:
 		   0, 1, 3,  // first Triangle
 		   1, 2, 3   // second Triangle
 	};
+	int window_width, window_height;
+
 	VAO VAO1;
 	VBO VBO1;
 	EBO EBO1;

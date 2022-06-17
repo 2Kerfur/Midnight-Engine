@@ -29,7 +29,7 @@ int UI_Button::Create(int xPos, int yPos,
 	//  3|----------------|2
 	glfwGetWindowSize(window, &window_width, &window_height);
 	//top right (1)
-	M_vertices[0] = xPos; //x
+	M_vertices[0] = xPos; //x //TODO: working ui placement
 	M_vertices[1]; //y
 
 	//buttom right (2)
@@ -150,8 +150,19 @@ void UI_Button::SetTransparency(float value)
 void UI_Button::ListenInput()
 {
 	double xpos, ypos;
+	int state = glfwGetKey(window, GLFW_MOUSE_BUTTON_1);
 	glfwGetCursorPos(window, &xpos, &ypos);
-	LOG_INFO(xpos);
+	if ((x_pos < xpos) && (xpos < x_pos + obj_width))
+	{
+		if ((y_pos < ypos) && (ypos < y_pos + obj_height))
+		{
+			if (state == GLFW_PRESS)
+			{
+				Button_pressed_callback('d');
+			}
+		}
+	} 
+	LOG_INFO(state);
 }
 
 void UI_Button::SetListener(void(*func)(char pressed))
