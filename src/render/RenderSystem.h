@@ -1,7 +1,9 @@
 #ifndef RENDERSYSTEM
 #define RENDERSYSTEM
     #include "Shader.h"
-    #include "render/UI/Objects/UI_Image.h"    
+    #include "render/UI/Objects/UI_Image.h"
+    #include "render/UI/Objects/UI_Button.h"
+
     //#include "GameObject.h"
     #include "GLFW/glfw3.h"
     
@@ -35,7 +37,9 @@ private:
 
     //GameObjects to render
     UI_Image *Render_UI_images[100];
+    UI_Button* Render_UI_buttons[100];
     int Render_UI_Images_count = 0;
+    int Render_UI_Buttons_count = 0;
 public:
     
     int Init(int width, int height, GLFWwindow* window);
@@ -45,6 +49,7 @@ public:
     void SetRenderSize(int width, int height);
 
     int AddGameObject(UI_Image *gameObject);
+    int AddGameObject(UI_Button* gameObject);
     
     void Render(GLFWwindow *window);
 };

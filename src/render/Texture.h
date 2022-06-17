@@ -9,7 +9,7 @@
 class Texture
 {
 public:
-	GLuint ID = 100;
+	GLuint ID;
 	GLenum type;
 	void Create(std::string path, GLenum texType, GLenum slot, GLenum format, GLenum pixelType);
 

@@ -55,10 +55,11 @@ int UI_Image::CompileShaders()
 	stbi_set_flip_vertically_on_load(true); // tell stb_image.h to flip loaded texture's on the y-axis.
 	// The FileSystem::getPath(...) is part of the GitHub repository so we can find files on any IDE/platform; replace it with your own image path.
 	unsigned char* data = stbi_load(
-		"D:/DEV/MY_GITHUB/Midnight-Engine/build/Release/resources/images/textures/icon.jpg", &width, &height, &nrChannels, 0);
+		"D:/DEV/MY_GITHUB/Midnight-Engine/build/Release/resources/images/textures/brick_2.png", &width, &height, &nrChannels, 0);
 	if (data)
 	{
-		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
+		//glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
+		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
 		glGenerateMipmap(GL_TEXTURE_2D);
 	}
 	else
@@ -107,21 +108,19 @@ int UI_Image::Render()
 	{
 		glEnable(GL_BLEND); //to render transparent images
 		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-		glClear(GL_DEPTH_BUFFER_BIT);
+		//glClear(GL_DEPTH_BUFFER_BIT);
 
 		shaderProg.Activate();
 		glBindTexture(GL_TEXTURE_2D, texture1);
 		glBindVertexArray(M_VAO);
 		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
-		//glBindVertexArray(M_VAO);
-		//glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 
 		//Delete buffers
 		glDeleteVertexArrays(1, &M_VAO);
 		glDeleteBuffers(1, &M_VBO);
 		glDeleteBuffers(1, &M_EBO);
 
-		glDisable(GL_BLEND);
+		//glDisable(GL_BLEND);
 	}
 	else
 	{

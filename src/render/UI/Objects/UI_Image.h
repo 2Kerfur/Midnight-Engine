@@ -11,12 +11,6 @@
 class UI_Image : public UI
 {
 private:
-	//float M_vertices[12] = {
-	//-0.5f,  1.0f, 0.0f,  // top right
-	//-0.5f, 0.85f, 0.0f,  // bottom right
-	//-1.0f, 0.85f, 0.0f,  // bottom left
-	//-1.0f,  1.0f, 0.0f   // top left 
-	//};
 	float M_vertices[32] = {
 		// positions          // colors           // texture coords
 		 0.5f,  0.5f, 0.0f,   1.0f, 0.0f, 0.0f,   1.0f, 1.0f,   // top right

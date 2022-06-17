@@ -33,6 +33,10 @@ int Window::InitWindow(int window_width, int window_height, std::string window_n
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE); //set only new gl features avalible
 
     window = glfwCreateWindow(window_width, window_height, Win_name.c_str(), NULL, NULL); //create main window
+    
+    //window = glfwCreateWindow(glfwGetVideoMode(glfwGetPrimaryMonitor())->width,
+      //  glfwGetVideoMode(glfwGetPrimaryMonitor())->height, "My Title",
+      //  glfwGetPrimaryMonitor(), nullptr);
     if (!window)
     {
         LOG_CRITICAL("GLFW window creation failed");
@@ -134,6 +138,14 @@ int Window::CompileShaders()
         LOG_INFO("Shader compilation failed. Code: {}", code);
         return 1;
     }
+}
+
+void Window::SetFullscreen()
+{
+    const GLFWvidmode* mode = glfwGetVideoMode(glfwGetPrimaryMonitor());
+    glfwSetWindowMonitor(window, glfwGetPrimaryMonitor(), 0, 0, mode->width, mode->height, mode->refreshRate);
+    glfwSwapInterval(1); //set fps lock to 60 max fps
+    LOG_INFO("GLFW Fullscreen mode activated");
 }
 
 RenderSystem* Window::GetEngine()

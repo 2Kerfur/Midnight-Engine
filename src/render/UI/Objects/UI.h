@@ -1,8 +1,9 @@
-#include "render/GameObject.h"
+
 
 
 #ifndef UI_H
 #define UI_H
+#include "render/GameObject.h"
 class UI : public GameObject
 {
 private:

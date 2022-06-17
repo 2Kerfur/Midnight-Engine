@@ -147,6 +147,14 @@ int RenderSystem::CompileShaders()
 		{
 			Render_UI_images[i]->CompileShaders();
 		}
+
+	}
+	for (int i = 0; Render_UI_Buttons_count > i; i++)
+	{
+		if (Render_UI_buttons[i]->Visible == true)
+		{
+			Render_UI_buttons[i]->CompileShaders();
+		}
 	}
 	Shaders_compiled = true;
 	
@@ -163,9 +171,16 @@ int RenderSystem::AddGameObject(UI_Image* ui_image)
 {
 	Render_UI_images[Render_UI_Images_count] = ui_image;
 	Render_UI_Images_count += 1;
-	//CompileShaders(); //TODO: remove this shit
-    //obj[Obj_count] = gameObject;
-    //Obj_count += 1;
+	return 0;
+}
+
+
+int RenderSystem::AddGameObject(UI_Button* gameObject)
+
+{
+	Render_UI_buttons[Render_UI_Buttons_count] = gameObject;
+	Render_UI_Buttons_count += 1;
+	//RENDER_LOG_INFO("Button added");
 	return 0;
 }
 float Transp;
@@ -183,7 +198,7 @@ void RenderSystem::Render(GLFWwindow* window)
 	ImGui::Begin("Engine Stat");
 	
 	ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
-	Render_UI_images[0]->SetTransparency(Transp);
+	//Render_UI_images[0]->SetTransparency(Transp);
 	ImGui::SliderFloat("float", &Transp, 0.0f, 1.0f);
 	ImGui::End();
 	//IMGUI
@@ -212,6 +227,18 @@ void RenderSystem::Render(GLFWwindow* window)
 			{
 				Render_UI_images[i]->BindProgram();
 				Render_UI_images[i]->Render();
+			}
+		}
+	}
+
+	for (int i = 0; Render_UI_Buttons_count > i; i++)
+	{
+		if (Render_UI_buttons[i]->Is_Created)
+		{
+			if (Render_UI_buttons[i]->Visible)
+			{
+				Render_UI_buttons[i]->BindProgram();
+				Render_UI_buttons[i]->Render();
 			}
 		}
 	}

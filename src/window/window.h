@@ -33,6 +33,8 @@ public:
     int Close();
     int GetWidth();
     int CompileShaders();
+
+    void SetFullscreen();
     RenderSystem* GetEngine();
   
     int GetHeight();
