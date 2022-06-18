@@ -8,6 +8,24 @@
 #include "utils/loader/ResourceLoader.h"
 #include "GLFW/glfw3.h"
 
+
+//void key_callback(GLFWwindow* window, int input_key, int scancode, int action, int mods)
+//{
+	//key = input_key;
+	//double xpos, ypos;
+	//int state = glfwGetKey(window, GLFW_MOUSE_BUTTON_1);
+	//glfwGetCursorPos(window, &xpos, &ypos);
+	//if ((x_pos < xpos) && (xpos < x_pos + obj_width))
+	//{
+	//	if ((y_pos < ypos) && (ypos < y_pos + obj_height))
+	//	{
+	//		if (state == GLFW_PRESS)
+	//		{
+	//			Button_pressed_callback('d');
+	//		}
+	//	}
+	//}
+//}
 int UI_Button::Create(int xPos, int yPos,
 	int width, int height,
 	std::string name, std::string image_path,
@@ -43,6 +61,8 @@ int UI_Button::Create(int xPos, int yPos,
 	//top left (4)
 	M_vertices[24];
 	M_vertices[25];
+
+	//glfwSetKeyCallback(window, UI_Button::ListenInput());
 
 	Is_Created = true;
 	return 0;
@@ -84,6 +104,7 @@ int UI_Button::CompileShaders()
 		std::cout << "Failed to load texture" << std::endl;
 	}
 	stbi_image_free(data);
+
 	return 0;
 }
 
@@ -112,13 +133,14 @@ int UI_Button::BindProgram()
 	return 0;
 }
 
-int UI_Button::Render()
+int UI_Button::Render(GLFWwindow* main_window)
 {
+	window = main_window;
 	if (Is_Created)
 	{
 		glEnable(GL_BLEND); //to render transparent images
 		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-		//glClear(GL_DEPTH_BUFFER_BIT);
+		glClear(GL_DEPTH_BUFFER_BIT);
 		//
 		shaderProg.Activate();
 		glBindTexture(GL_TEXTURE_2D, texture1);
@@ -152,17 +174,18 @@ void UI_Button::ListenInput()
 	double xpos, ypos;
 	int state = glfwGetKey(window, GLFW_MOUSE_BUTTON_1);
 	glfwGetCursorPos(window, &xpos, &ypos);
+	key = glfwGetMouseButton(window, key);
+
 	if ((x_pos < xpos) && (xpos < x_pos + obj_width))
 	{
 		if ((y_pos < ypos) && (ypos < y_pos + obj_height))
 		{
-			if (state == GLFW_PRESS)
+			if (key)
 			{
 				Button_pressed_callback('d');
 			}
 		}
 	} 
-	LOG_INFO(state);
 }
 
 void UI_Button::SetListener(void(*func)(char pressed))

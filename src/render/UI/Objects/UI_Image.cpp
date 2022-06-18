@@ -106,9 +106,10 @@ int UI_Image::Render()
 {
 	if (Is_Created)
 	{
+
 		glEnable(GL_BLEND); //to render transparent images
 		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-		//glClear(GL_DEPTH_BUFFER_BIT);
+		glClear(GL_DEPTH_BUFFER_BIT);
 
 		shaderProg.Activate();
 		glBindTexture(GL_TEXTURE_2D, texture1);
@@ -119,8 +120,6 @@ int UI_Image::Render()
 		glDeleteVertexArrays(1, &M_VAO);
 		glDeleteBuffers(1, &M_VBO);
 		glDeleteBuffers(1, &M_EBO);
-
-		//glDisable(GL_BLEND);
 	}
 	else
 	{

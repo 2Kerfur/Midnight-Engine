@@ -238,7 +238,7 @@ void RenderSystem::Render(GLFWwindow* window)
 			if (Render_UI_buttons[i]->Visible)
 			{
 				Render_UI_buttons[i]->BindProgram();
-				Render_UI_buttons[i]->Render();
+				Render_UI_buttons[i]->Render(window);
 			}
 		}
 	}

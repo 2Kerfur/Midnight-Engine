@@ -13,6 +13,7 @@
 class UI_Button : public UI
 {
 private:
+	
 	float M_vertices[32] = {
 		// positions          // colors           // texture coords
 		 0.0f,  1.0f, 0.0f,   1.0f, 0.0f, 0.0f,   1.0f, 1.0f,   // top right
@@ -25,7 +26,7 @@ private:
 		   1, 2, 3   // second Triangle
 	};
 	int window_width, window_height;
-
+	int key; //glfw key
 	VAO VAO1;
 	VBO VBO1;
 	EBO EBO1;
@@ -53,7 +54,7 @@ public:
 	void SetPos(float x, float y);
 	int CompileShaders();
 	int BindProgram();
-	int Render();
+	int Render(GLFWwindow *window);
 	void SetTransparency(float value);
 	void SetListener(void (*func)(char pressed));
 };

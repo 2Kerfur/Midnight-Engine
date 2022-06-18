@@ -1,6 +1,3 @@
-
-
-
 #ifndef UI_H
 #define UI_H
 #include "render/GameObject.h"
