@@ -34,6 +34,10 @@ private:
 	GLFWwindow* window;
 	unsigned int texture1;
 
+	float GetXPos(float x_position);
+	float GetYPos(float x_position);
+
+
 	unsigned int M_VBO, M_VAO, M_EBO;
 	unsigned int M_vertexShader;
 	unsigned int M_fragmentShader;
@@ -54,7 +58,7 @@ public:
 	void SetPos(float x, float y);
 	int CompileShaders();
 	int BindProgram();
-	int Render(GLFWwindow *window);
+	int Render();
 	void SetTransparency(float value);
 	void SetListener(void (*func)(char pressed));
 };

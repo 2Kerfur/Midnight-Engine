@@ -8,24 +8,56 @@
 #include "utils/loader/ResourceLoader.h"
 #include "GLFW/glfw3.h"
 
+float UI_Button::GetXPos(float x_position)
+{
+	float pos;
+	if (x_position == 0)
+	{
+		pos = -1;
+	}
+	else
+	{
+		float dif = window_width / x_position;
+		float norm = 1 / dif;
+		float gl_pos = norm * 2; //0.25
 
-//void key_callback(GLFWwindow* window, int input_key, int scancode, int action, int mods)
-//{
-	//key = input_key;
-	//double xpos, ypos;
-	//int state = glfwGetKey(window, GLFW_MOUSE_BUTTON_1);
-	//glfwGetCursorPos(window, &xpos, &ypos);
-	//if ((x_pos < xpos) && (xpos < x_pos + obj_width))
-	//{
-	//	if ((y_pos < ypos) && (ypos < y_pos + obj_height))
-	//	{
-	//		if (state == GLFW_PRESS)
-	//		{
-	//			Button_pressed_callback('d');
-	//		}
-	//	}
-	//}
-//}
+		if (gl_pos <= 1)
+		{
+			pos = 0 - (1 - gl_pos);
+		}
+		else if (gl_pos > 1)
+		{
+			pos = gl_pos - 1;
+		}
+	}
+	return pos;
+} 
+
+float UI_Button::GetYPos(float y_postion)
+{
+	float pos;
+	if (y_postion == 0)
+	{
+		pos = 1;
+	}
+	else
+	{
+		float dif = window_width / y_postion;
+		float norm = 1 / dif;
+		float gl_pos = norm * 2; //0.25
+
+		if (gl_pos <= 1)
+		{
+			pos = 1 - gl_pos;
+		}
+		else if (gl_pos > 1)
+		{
+			pos = 0 - (gl_pos - 1);
+		}
+	}
+	return pos;
+}
+
 int UI_Button::Create(int xPos, int yPos,
 	int width, int height,
 	std::string name, std::string image_path,
@@ -37,32 +69,43 @@ int UI_Button::Create(int xPos, int yPos,
 	obj_height = height;
 	obj_name = name;
 	window = glfw_window;
-
-	//  4|----------------|1
-	//	 |				  |
-	//   |				  |
-	//   |				  |
-	//   | 				  |
-	//   | 				  |
-	//  3|----------------|2
 	glfwGetWindowSize(window, &window_width, &window_height);
+
+	float pos_1_x = GetXPos(x_pos + obj_width);
+	float pos_1_y = GetYPos(y_pos);
+
+	float pos_2_x = GetXPos(x_pos + obj_width);
+	float pos_2_y = GetYPos(y_pos + obj_width);
+
+	float pos_3_x = GetXPos(x_pos);
+	float pos_3_y = GetYPos(y_pos + obj_height);
+
+	float pos_4_x = GetXPos(x_pos);
+	float pos_4_y = GetYPos(y_pos);
+	
+	//  4|----------------|1
+	//	 |		  |		  |
+	//   |		  |		  |
+	//   |--------|-------|
+	//   | 		  |		  |
+	//   | 		  |		  |
+	//  3|----------------|2
+	
 	//top right (1)
-	M_vertices[0] = xPos; //x //TODO: working ui placement
-	M_vertices[1]; //y
+	M_vertices[0] = pos_1_x; //x
+	M_vertices[1] = pos_1_y; //y 
 
 	//buttom right (2)
-	M_vertices[8]; 
-	M_vertices[9];
+	M_vertices[8] = pos_2_x;
+	M_vertices[9] = pos_2_y;
 
 	//bottom left (3)
-	M_vertices[16];
-	M_vertices[17];
+	M_vertices[16] = pos_3_x;
+	M_vertices[17] = pos_3_y;
 
 	//top left (4)
-	M_vertices[24];
-	M_vertices[25];
-
-	//glfwSetKeyCallback(window, UI_Button::ListenInput());
+	M_vertices[24] = pos_4_x;
+	M_vertices[25] = pos_4_y;
 
 	Is_Created = true;
 	return 0;
@@ -70,7 +113,32 @@ int UI_Button::Create(int xPos, int yPos,
 
 void UI_Button::SetPos(float x, float y)
 {
+	x_pos = x;
+	y_pos = y;
+	float pos_1_x = GetXPos(x + obj_width);
+	float pos_1_y = GetYPos(y);
 
+	float pos_2_x = GetXPos(x + obj_width);
+	float pos_2_y = GetYPos(y + obj_width);
+
+	float pos_3_x = GetXPos(x);
+	float pos_3_y = GetYPos(y + obj_height);
+
+	float pos_4_x = GetXPos(x);
+	float pos_4_y = GetYPos(y);
+
+	//top right (1)
+	M_vertices[0] = pos_1_x; //x
+	M_vertices[1] = pos_1_y; //y 
+	//buttom right (2)
+	M_vertices[8] = pos_2_x;
+	M_vertices[9] = pos_2_y;
+	//bottom left (3)
+	M_vertices[16] = pos_3_x;
+	M_vertices[17] = pos_3_y;
+	//top left (4)
+	M_vertices[24] = pos_4_x;
+	M_vertices[25] = pos_4_y;
 }
 
 int UI_Button::CompileShaders()
@@ -133,9 +201,8 @@ int UI_Button::BindProgram()
 	return 0;
 }
 
-int UI_Button::Render(GLFWwindow* main_window)
+int UI_Button::Render()
 {
-	window = main_window;
 	if (Is_Created)
 	{
 		glEnable(GL_BLEND); //to render transparent images
