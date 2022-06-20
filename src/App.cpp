@@ -37,7 +37,6 @@ int main()
     UI_Button button;
     image.Create(100, 100, 100, 100, "testImage", "testPath");
     button.Create(0,0, 100, 100, "testButton", "testPath", MainWindow.GetWindow());
-    button.SetPos(100, 10);
     button.SetListener(&getdata);
 
     RenderSystem* engine;

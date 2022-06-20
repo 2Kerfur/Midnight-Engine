@@ -130,6 +130,7 @@ target_include_directories(${PROJECT_NAME}
     PUBLIC external/freetype
 )
 target_link_directories(${PROJECT_NAME}
+    PRIVATE external/freetype
     PRIVATE external/glfw/build/src
     PRIVATE external/freetype
 )

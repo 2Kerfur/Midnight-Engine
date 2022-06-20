@@ -16,6 +16,7 @@
 #include "stb/stb_image.h"
 
 
+
 int Window::InitWindow(int window_width, int window_height, std::string window_name)
 {
     Win_width = window_width;
@@ -34,16 +35,12 @@ int Window::InitWindow(int window_width, int window_height, std::string window_n
 
     window = glfwCreateWindow(window_width, window_height, Win_name.c_str(), NULL, NULL); //create main window
     
-    //window = glfwCreateWindow(glfwGetVideoMode(glfwGetPrimaryMonitor())->width,
-      //  glfwGetVideoMode(glfwGetPrimaryMonitor())->height, "My Title",
-      //  glfwGetPrimaryMonitor(), nullptr);
     if (!window)
     {
         LOG_CRITICAL("GLFW window creation failed");
         glfwTerminate();
         return -1;
     }
-
 
     glfwMakeContextCurrent(window);
     glfwSwapInterval(1);
@@ -52,6 +49,10 @@ int Window::InitWindow(int window_width, int window_height, std::string window_n
     IMGUI_CHECKVERSION();
     ImGui::CreateContext();
     ImGuiIO& io = ImGui::GetIO(); (void)io;
+
+    io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;           // Enable Docking
+    io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable;         // Enable Multi-Viewport / Platform Windows
+    io.ConfigFlags |= ImGuiDockNodeFlags_PassthruCentralNode;                                                         //io.ConfigFlags |= ImGuiDockNodeFlags_DockSpace;
     ImGui::StyleColorsDark();
     ImGui_ImplGlfw_InitForOpenGL(window, true);
     ImGui_ImplOpenGL3_Init(OPENGL_VERSION);

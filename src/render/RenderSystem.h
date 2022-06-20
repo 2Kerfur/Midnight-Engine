@@ -4,7 +4,6 @@
     #include "render/UI/Objects/UI_Image.h"
     #include "render/UI/Objects/UI_Button.h"
 
-    //#include "GameObject.h"
     #include "GLFW/glfw3.h"
     
     #include "Shader.h"
@@ -13,6 +12,10 @@
     #include "EBO.h"
     #include "Camera.h"
     #include "Texture.h"
+
+    #include <map>
+    #include "freetype/ft2build.h" //TODO: Text rendering implementation
+    #include FT_FREETYPE_H
     
 class RenderSystem
 {
@@ -21,12 +24,8 @@ private:
     bool Shaders_compiled = false;
     int Render_width = 500;
     int Render_height = 500;
-    //Shader ourShader;
     GLFWwindow* render_window;
     
-    /*GameObject* obj[100];
-    int Obj_count = 0;*/
-
     //rendering objects
     Camera camera;
     VAO VAO1;
@@ -40,6 +39,7 @@ private:
     UI_Button* Render_UI_buttons[100];
     int Render_UI_Images_count = 0;
     int Render_UI_Buttons_count = 0;
+    
 public:
     
     int Init(int width, int height, GLFWwindow* window);

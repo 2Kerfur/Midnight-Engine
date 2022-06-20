@@ -57,6 +57,7 @@ public:
 	int Create(int xPos, int yPos, int width, int height, std::string name, std::string image_path, GLFWwindow* glfw_window);
 	void SetPos(float x, float y);
 	int CompileShaders();
+	void UpdateSize(int width, int height);
 	int BindProgram();
 	int Render();
 	void SetTransparency(float value);

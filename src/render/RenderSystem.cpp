@@ -17,6 +17,8 @@ std::string GetCurrentDirectory()
 }
 #endif
 
+#include "utils/loader/ResourceLoader.h"
+
 #include "RenderSystem.h"
 #include "glad/glad.h"
 #include "utils/log.h"
@@ -53,30 +55,6 @@ GLfloat vertices[] =
 	 0.5f, 0.0f,  0.5f,     0.83f, 0.70f, 0.44f,	5.0f, 0.0f,
 	 0.0f, 0.8f,  0.0f,     0.92f, 0.86f, 0.76f,	2.5f, 5.0f
 };
-std::string vertexCode =
-"#version 330 core\n"
-"layout (location = 0) in vec3 aPos;\n"
-"layout (location = 1) in vec3 aColor;\n"
-"layout (location = 2) in vec2 aTex;\n"
-"out vec3 color;\n"
-"out vec2 texCoord;\n"
-"uniform mat4 camMatrix;\n"
-"void main()\n"
-"{\n"
-"   gl_Position = camMatrix * vec4(aPos, 1.0);\n"
-"   color = aColor;\n"
-"   texCoord = aTex;\n"
-"}\0";
-std::string fragmentCode =
-"#version 330 core\n"
-"out vec4 FragColor;\n"
-"in vec3 color;\n"
-"in vec2 texCoord;\n"
-"uniform sampler2D tex0;\n"
-"void main()\n"
-"{\n"
-"   FragColor = texture(tex0, texCoord);\n"
-"}\0";
 // Indices for vertices order
 GLuint indices[] =
 {
@@ -109,14 +87,13 @@ int RenderSystem::Init(int width, int height, GLFWwindow* window)
 		glViewport(0, 0, width, height);
 		return 0;
 	}
-	
 }
 int RenderSystem::CompileShaders()
 {
 	
-	shaderProgram.Create(vertexCode, fragmentCode);
-	// Generates Vertex Array Object and binds it
-	
+	shaderProgram.Create(
+		LoadShader("piramide.vert"), LoadShader("piramide.frag"));
+
 	VAO1.Create();
 	VAO1.Bind();
 
@@ -166,6 +143,14 @@ void RenderSystem::SetRenderSize(int width, int height)
 	Render_width = width;
 	Render_height = height;
 	glViewport(0, 0, width, height);
+	for (int i = 0; Render_UI_Buttons_count > i; i++)
+	{
+		if (Render_UI_buttons[i]->Visible == true)
+		{
+			Render_UI_buttons[i]->UpdateSize(width, height);
+		}
+
+	}
 }
 int RenderSystem::AddGameObject(UI_Image* ui_image)
 {
@@ -174,9 +159,7 @@ int RenderSystem::AddGameObject(UI_Image* ui_image)
 	return 0;
 }
 
-
 int RenderSystem::AddGameObject(UI_Button* gameObject)
-
 {
 	Render_UI_buttons[Render_UI_Buttons_count] = gameObject;
 	Render_UI_Buttons_count += 1;
@@ -184,9 +167,10 @@ int RenderSystem::AddGameObject(UI_Button* gameObject)
 	return 0;
 }
 float Transp;
+
 void RenderSystem::Render(GLFWwindow* window)
 {
-	
+
 	glEnable(GL_DEPTH_TEST);
 	glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -195,12 +179,21 @@ void RenderSystem::Render(GLFWwindow* window)
 	ImGui_ImplOpenGL3_NewFrame();
 	ImGui_ImplGlfw_NewFrame();
 	ImGui::NewFrame();
+
+	ImGui::DockSpaceOverViewport(ImGui::GetMainViewport());
 	ImGui::Begin("Engine Stat");
 	
 	ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
 	//Render_UI_images[0]->SetTransparency(Transp);
 	ImGui::SliderFloat("float", &Transp, 0.0f, 1.0f);
 	ImGui::End();
+
+	//imgui window 2
+	//ImGui::Begin("Another Window");   // Pass a pointer to our bool variable (the window will have a closing button that will clear the bool when clicked)
+	//ImGui::Text("Hello from another window!");
+	//if (ImGui::Button("Close Me"));
+	//ImGui::End();
+
 	//IMGUI
 
 
@@ -245,7 +238,14 @@ void RenderSystem::Render(GLFWwindow* window)
 
 	//IMGUI
 	
+	
+		
 	ImGui::Render();
 	ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+	
 	//IMGUI
+	GLFWwindow* backup_current_context = glfwGetCurrentContext();
+	ImGui::UpdatePlatformWindows();
+	ImGui::RenderPlatformWindowsDefault();
+	glfwMakeContextCurrent(backup_current_context);
 }

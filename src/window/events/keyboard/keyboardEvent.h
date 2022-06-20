@@ -11,7 +11,6 @@ private:
     void UpdateButton(char key);
 public:
     void KeyboardButtonPressed(int key);
-    //static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);
     int Init(GLFWwindow* app_window);
     void Update();
     

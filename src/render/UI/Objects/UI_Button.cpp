@@ -69,6 +69,7 @@ int UI_Button::Create(int xPos, int yPos,
 	obj_height = height;
 	obj_name = name;
 	window = glfw_window;
+
 	glfwGetWindowSize(window, &window_width, &window_height);
 
 	float pos_1_x = GetXPos(x_pos + obj_width);
@@ -146,7 +147,6 @@ int UI_Button::CompileShaders()
 	shaderProg.Create(
 		LoadShader("default_ui.vert"),
 		LoadShader("default_ui.frag"));
-	//load texture
 	glGenTextures(1, &texture1);
 	glBindTexture(GL_TEXTURE_2D, texture1);
 	// set the texture wrapping parameters
@@ -160,7 +160,9 @@ int UI_Button::CompileShaders()
 	stbi_set_flip_vertically_on_load(true); // tell stb_image.h to flip loaded texture's on the y-axis.
 	// The FileSystem::getPath(...) is part of the GitHub repository so we can find files on any IDE/platform; replace it with your own image path.
 	unsigned char* data = stbi_load(
-		"D:/DEV/MY_GITHUB/Midnight-Engine/build/Release/resources/images/textures/button.png", &width, &height, &nrChannels, 0);
+		//"D:/DEV/MY_GITHUB/Midnight-Engine/build/Release/resources/images/textures/button.png", &width, &height, &nrChannels, 0);
+		"D:/DEV/MY_GITHUB/Midnight-Engine/build/Release/resources/images/MidnightLogo.png", &width, &height, &nrChannels, 0);
+
 	if (data)
 	{
 		//glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
@@ -228,7 +230,6 @@ int UI_Button::Render()
 }
 void UI_Button::SetTransparency(float value)
 {
-	
 	//if (0 <= value <= 1)
 	//{
 	//	Transparency = value;
@@ -258,4 +259,9 @@ void UI_Button::ListenInput()
 void UI_Button::SetListener(void(*func)(char pressed))
 {
 	Button_pressed_callback = func;
+}
+
+void UI_Button::UpdateSize(int width, int height)
+{
+	
 }
