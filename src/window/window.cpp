@@ -52,7 +52,9 @@ int Window::InitWindow(int window_width, int window_height, std::string window_n
 
     io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;           // Enable Docking
     io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable;         // Enable Multi-Viewport / Platform Windows
-    io.ConfigFlags |= ImGuiDockNodeFlags_PassthruCentralNode;                                                         //io.ConfigFlags |= ImGuiDockNodeFlags_DockSpace;
+    //io.ConfigFlags |= ImGuiDockNodeFlags_PassthruCentralNode;  
+    //io.ConfigFlags |= ImGuiDockNodeFlags_Alva;//io.ConfigFlags |= ImGuiWindowFlags_Background
+
     ImGui::StyleColorsDark();
     ImGui_ImplGlfw_InitForOpenGL(window, true);
     ImGui_ImplOpenGL3_Init(OPENGL_VERSION);

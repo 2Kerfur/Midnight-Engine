@@ -128,14 +128,16 @@ target_include_directories(${PROJECT_NAME}
     PUBLIC external
     PUBLIC external/imgui
     PUBLIC external/freetype
+    PUBLIC external/assimp/include
 )
 target_link_directories(${PROJECT_NAME}
     PRIVATE external/freetype
     PRIVATE external/glfw/build/src
     PRIVATE external/freetype
+    PRIVATE external/assimp/lib
 )
 if (WIN32)
-    target_link_libraries(${PROJECT_NAME} glfw3 ${OPENGL_LIBRARY} freetype)
+    target_link_libraries(${PROJECT_NAME} glfw3 ${OPENGL_LIBRARY} freetype assimp)
 endif (WIN32)
 
 if (UNIX)

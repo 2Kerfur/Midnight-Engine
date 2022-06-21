@@ -27,7 +27,7 @@ int main()
 {
     //LOG_INIT();
     Window MainWindow;
-    MainWindow.InitWindow(800, 800, "MidnightEngine");
+    MainWindow.InitWindow(1000, 800, "MidnightEngine");
     MainWindow.SetIcon("resources\\images\\icon.png");
 
     MainWindow.InitEngine();

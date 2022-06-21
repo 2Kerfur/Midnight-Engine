@@ -167,7 +167,8 @@ int RenderSystem::AddGameObject(UI_Button* gameObject)
 	return 0;
 }
 float Transp;
-
+//Window variables
+bool Project_settings_window = false;
 void RenderSystem::Render(GLFWwindow* window)
 {
 
@@ -179,23 +180,138 @@ void RenderSystem::Render(GLFWwindow* window)
 	ImGui_ImplOpenGL3_NewFrame();
 	ImGui_ImplGlfw_NewFrame();
 	ImGui::NewFrame();
-
-	ImGui::DockSpaceOverViewport(ImGui::GetMainViewport());
-	ImGui::Begin("Engine Stat");
 	
+	
+	
+
+	//Docking code=--------------------------------------------------------------
+	static bool dockspaceOpen = true;
+	static ImGuiDockNodeFlags dockspace_flags = ImGuiDockNodeFlags_PassthruCentralNode;
+	ImGuiWindowFlags window_flags = ImGuiWindowFlags_MenuBar | ImGuiWindowFlags_NoDocking;
+
+	ImGuiViewport* viewport = ImGui::GetMainViewport();
+	ImGui::SetNextWindowPos(viewport->Pos);
+	ImGui::SetNextWindowSize(viewport->Size);
+	ImGui::SetNextWindowViewport(viewport->ID);
+	ImGui::PushStyleVar(ImGuiStyleVar_WindowRounding, 0.0f);
+	ImGui::PushStyleVar(ImGuiStyleVar_WindowBorderSize, 0.0f);
+	window_flags |= ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove;
+	window_flags |= ImGuiWindowFlags_NoBringToFrontOnFocus | ImGuiWindowFlags_NoNavFocus | ImGuiDockNodeFlags_PassthruCentralNode;
+
+	if (dockspace_flags & ImGuiDockNodeFlags_PassthruCentralNode)
+		window_flags |= ImGuiWindowFlags_NoBackground; //not to render gray default background
+
+	ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2(0.0f, 0.0f));
+	ImGui::Begin("DockSpace Demo", &dockspaceOpen, window_flags);
+	ImGui::PopStyleVar(2); 
+
+	// DockSpace
+	ImGuiIO& io = ImGui::GetIO();
+	ImGuiStyle& style = ImGui::GetStyle();
+	float minWinSizeX = style.WindowMinSize.x;
+	style.WindowMinSize.x = 350.0f;
+	if (io.ConfigFlags & ImGuiConfigFlags_DockingEnable)
+	{
+		ImGuiID dockspace_id = ImGui::GetID("MyDockSpace");
+		ImGui::DockSpace(dockspace_id, ImVec2(0.0f, 0.0f), dockspace_flags);
+	}
+
+	//menu bar
+	if (ImGui::BeginMenuBar())
+	{
+		if (ImGui::BeginMenu("File")) {
+			if (ImGui::MenuItem("New", "Ctrl+N"))
+			{
+
+			}
+
+			if (ImGui::MenuItem("Open", "Ctrl+O"))
+			{
+
+			}
+			if (ImGui::MenuItem("Save As", "Ctrl+Shift+S"))
+			{
+
+			}
+			if (ImGui::MenuItem("Import"))
+			{
+
+			}
+			if (ImGui::MenuItem("Export"))
+			{
+
+			}
+			if (ImGui::MenuItem("Project Settings"))
+			{
+				Project_settings_window = true;
+			}
+			if (ImGui::MenuItem("Exit"))
+			{
+
+			}
+			ImGui::EndMenu();
+		}
+		if (ImGui::BeginMenu("LoadScene"))
+		{
+			if (ImGui::MenuItem("Default"))
+			{
+
+			}
+			ImGui::EndMenu();
+		}
+		if (ImGui::BeginMenu("Info"))
+		{
+			if (ImGui::MenuItem("Documentation"))
+			{
+
+			}
+
+			if (ImGui::MenuItem("Project info"))
+			{
+
+			}
+			ImGui::EndMenu();
+		}
+
+		ImGui::EndMenuBar();
+	}
+	//docking code-----------------------------------------------------------
+	ImVec2 stat_window_size;
+	ImVec2 stat_window_pos;
+	int glfw_window_pos_x, glfw_window_pos_y;
+	int window_width, window_height;
+
+	ImGui::Begin("Engine Stat");
+	stat_window_size = ImGui::GetWindowSize();
+	stat_window_pos = ImGui::GetWindowPos();
+	
+	glfwGetWindowPos(window, &glfw_window_pos_x, &glfw_window_pos_y);
+	glfwGetWindowSize(window, &window_width, &window_height);
+
+	if (!((stat_window_pos.x + stat_window_size.x) > (glfw_window_pos_x + window_width))) //check if Engine stat window out of glfw window 
+	{
+		if (glfw_window_pos_x < stat_window_pos.x)
+		{
+			if (stat_window_pos.y > glfw_window_pos_y)
+			{
+				if (!((stat_window_pos.y + stat_window_size.y) > (glfw_window_pos_y + window_height)))
+				{
+					glViewport(0, -19, (Render_width - stat_window_size.x), Render_height); //resize gl viewport cosidering engine stat window size
+				}
+			}
+		}
+	}
 	ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
-	//Render_UI_images[0]->SetTransparency(Transp);
 	ImGui::SliderFloat("float", &Transp, 0.0f, 1.0f);
 	ImGui::End();
 
-	//imgui window 2
-	//ImGui::Begin("Another Window");   // Pass a pointer to our bool variable (the window will have a closing button that will clear the bool when clicked)
-	//ImGui::Text("Hello from another window!");
-	//if (ImGui::Button("Close Me"));
-	//ImGui::End();
-
+	if (Project_settings_window)
+	{
+		ImGui::Begin("Project Settings");
+		ImGui::SliderFloat("float", &Transp, 0.0f, 1.0f);
+		ImGui::End();
+	}
 	//IMGUI
-
 
 	//LOG_INFO("Screen cleared");
 	shaderProgram.Activate();
