@@ -2,3 +2,6 @@
 //#define ENGINE_RELEASE //delete debug message & imgui and console hiden
 
 #define OPENGL_VERSION "#version 330" //set default openGL version
+
+#define STATE_OK 0
+#define STATE_ERROR 1
