@@ -2,3 +2,4 @@
 //#define ENGINE_RELEASE //delete debug message & imgui and console hiden
 
 #define OPENGL_VERSION "#version 330" //set default openGL version
+#define MAX_PATH_SIZE 200

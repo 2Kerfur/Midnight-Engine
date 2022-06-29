@@ -4,7 +4,7 @@
     #include <shlobj.h> 
     #define _SILENCE_EXPERIMENTAL_FILESYSTEM_DEPRECATION_WARNING //filesystem fix error
     #include <experimental/filesystem>
-#endif
+
 std::string OpenFolder()
 {
     LPCWSTR l_folder_path;
@@ -32,3 +32,4 @@ std::string OpenFolder()
 	}
 	return "nothing";
 }
+#endif

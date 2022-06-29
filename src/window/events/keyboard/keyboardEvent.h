@@ -3,7 +3,7 @@
 
 #include "GLFW/glfw3.h"
 
-static class KeyboardEventReader 
+class KeyboardEventReader
 {
 private:
     GLFWwindow* window;
@@ -13,7 +13,7 @@ public:
     void KeyboardButtonPressed(int key);
     int Init(GLFWwindow* app_window);
     void Update();
-    
+
     char GetPressedButton();
 };
 void KeyboardInit(GLFWwindow* window);

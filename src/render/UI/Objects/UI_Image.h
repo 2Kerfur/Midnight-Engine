@@ -1,7 +1,7 @@
 #ifndef UI_IMAGE_H
 #define UI_IMAGE_H
 #include "render/UI/Objects/UI.h"
-#include "render/Shader.h"
+#include "render/shader.h"
 #include <string>
 
 #include"render/VAO.h"

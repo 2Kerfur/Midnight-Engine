@@ -2,13 +2,12 @@
 #define LOG_H
 #include <string>
 #include <iostream>
-#include <crtdbg.h> //TODO: This is win only
+//#include <crtdbg.h> //TODO: This is win only
 #include "Config.h"
 #endif
 
-//log message includes src file and line where log was called
-//comment this define to turn off
-#define ON_CRITICAL_DO_ASSERTE
+#define STATUS_ERROR 1
+#define STATUS_OK 0
 
 #ifdef ENGINE_DEBUG //TODO: implement several loggers ex: RENDER, LOADER, PHYSICS, CORE, SHADER
 void Log_init();
@@ -182,12 +181,7 @@ void shader_log_critical(std::string message_1, double message_2);
 #define LOG_INFO(message_1, ...)      engine_log_info(message_1, __VA_ARGS__)
 #define LOG_WARN(message_1, ...)       engine_log_warn(message_1, __VA_ARGS__)
 #define LOG_ERROR(message_1, ...)     engine_log_error(message_1, __VA_ARGS__)
-
-//#ifdef ON_CRITICAL_DO_ASSERTE
-//#define LOG_CRITICAL(message_1, ...)   engine_log_critical(message_1, __VA_ARGS__);_ASSERTE(0)
-//#else
-#define LOG_CRITICAL(message_1, ...)   engine_log_critical(message_1, __VA_ARGS__);
-//#endif
+#define LOG_CRITICAL(message_1, ...)   engine_log_critical(message_1, __VA_ARGS__)
 
 #define RENDER_LOG_TRACE(message_1, ...)     render_log_trace(message_1, __VA_ARGS__)
 #define RENDER_LOG_INFO(message_1, ...)      render_log_info(message_1, __VA_ARGS__)

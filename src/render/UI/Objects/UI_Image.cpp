@@ -1,7 +1,7 @@
 #include "UI_Image.h"
 #include "utils/log.h"
 #include "glad/glad.h"
-#include "render/Shader.h"
+#include "render/shader.h"
 #include <iostream>
 #include "stb/stb_image.h"
 #include "utils/loader/ResourceLoader.h"
@@ -38,9 +38,10 @@ void UI_Image::SetTransparency(float value)
 
 int UI_Image::CompileShaders()
 {
-	shaderProg.Create(
-		LoadShader("default_ui.vert"),
-		LoadShader("default_ui.frag"));
+	//shaderProg.Create(
+	//	LoadShader("default_ui.vert"), //TODO: Fix
+	//	LoadShader("default_ui.frag"));
+
 	//load texture
 	glGenTextures(1, &texture1);
 	glBindTexture(GL_TEXTURE_2D, texture1);
@@ -124,7 +125,7 @@ int UI_Image::Render()
 	else
 	{
 		
-		RENDER_LOG_ERROR("Object: " + obj_name + " was not created"); 
+		//RENDER_LOG_ERROR("Object: " + obj_name + " was not created"); 
 	}
 	return 0;
 }

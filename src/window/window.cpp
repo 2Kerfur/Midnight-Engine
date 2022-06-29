@@ -3,11 +3,16 @@
 #include "imgui_impl_glfw.h"
 #include "imgui_impl_opengl3.h"
 
-#include "Window.h"
+#include "window.h"
 #define STB_IMAGE_IMPLEMENTATION
 
 #ifdef _WIN32 
-#include <Windows.h> 
+    #include <Windows.h>
+#endif
+
+#ifdef __linux__
+    #include <libgen.h>         // dirname
+    #include <unistd.h>         // readlink
 #endif
 
 #include "utils/log.h"
@@ -25,7 +30,8 @@ int Window::InitWindow(int window_width, int window_height, std::string window_n
     
     if (!glfwInit())
     {
-        LOG_CRITICAL("GLFW initialization failed");
+        LOG_CRITICAL("GLFW initialization failed. Code: {}", STATUS_ERROR);
+        
         return -1;
     }
         
@@ -37,7 +43,7 @@ int Window::InitWindow(int window_width, int window_height, std::string window_n
     
     if (!window)
     {
-        LOG_CRITICAL("GLFW window creation failed");
+        LOG_CRITICAL("GLFW window creation failed. Code: {}", STATUS_ERROR);
         glfwTerminate();
         return -1;
     }
@@ -65,15 +71,27 @@ int Window::InitWindow(int window_width, int window_height, std::string window_n
 
 void Window::SetIcon(std::string file_name)
 {
+    std::string endFileLocation;
 #ifdef _WIN32 //TODO: Create set icon implementation for linux
-    char buffer[MAX_PATH];
+    char buffer[MAX_PATH_SIZE];
     GetModuleFileName(NULL, buffer, MAX_PATH);
     std::string fileLocation = std::string(buffer); //path with .exe
     std::string fileFolderLocation = fileLocation.substr(0, fileLocation.find_last_of("\\/")); //path without .exe only folder
-    std::string endFileLocation = fileFolderLocation + "\\" + file_name;
+    endFileLocation = fileFolderLocation + "\\" + file_name;
+#endif
+#ifdef __linux__
+    char result[MAX_PATH_SIZE];
+    ssize_t count = readlink("/proc/self/exe", result, MAX_PATH_SIZE);
+    char *path;
+    if (count != -1) {
+        path = dirname(result);
+        std::string linux_path_result(path);
+        endFileLocation = linux_path_result + "/" + file_name;
+        std::cout << endFileLocation << std::endl;
+    }
 #endif
     
-    GLFWimage images[1]; 
+    GLFWimage images[1]; //TODO: linux impmlementation
     images[0].pixels = stbi_load(endFileLocation.c_str(), &images[0].width, &images[0].height, 0, 4); //load icon from file
     glfwSetWindowIcon(window, 1, images); //set icon
     stbi_image_free(images[0].pixels); //free memory
@@ -119,7 +137,7 @@ int Window::InitEngine()
     if (!code)
     {
         LOG_INFO("Engine successfully initialized. Code: {}", code);
-        return 0;
+         return 0;
     }
     else
     {
@@ -133,14 +151,15 @@ int Window::CompileShaders()
     int code = RenderEngine.CompileShaders();
     if (!code)
     {
-        LOG_INFO("Shader compilation success: {}", code);
-        return 0;
+       LOG_INFO("Shader compilation success: {}", code);
+       return 0;
     }
     else
     {
-        LOG_INFO("Shader compilation failed. Code: {}", code);
-        return 1;
+       LOG_INFO("Shader compilation failed. Code: {}", code);
+       return 1;
     }
+    return 0;
 }
 
 void Window::SetFullscreen()
@@ -148,7 +167,7 @@ void Window::SetFullscreen()
     const GLFWvidmode* mode = glfwGetVideoMode(glfwGetPrimaryMonitor());
     glfwSetWindowMonitor(window, glfwGetPrimaryMonitor(), 0, 0, mode->width, mode->height, mode->refreshRate);
     glfwSwapInterval(1); //set fps lock to 60 max fps
-    LOG_INFO("GLFW Fullscreen mode activated");
+    LOG_INFO("GLFW Fullscreen mode activated. Code: {}", STATUS_OK);
 }
 
 RenderSystem* Window::GetEngine()

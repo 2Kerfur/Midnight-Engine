@@ -1,7 +1,7 @@
 #include "UI_Button.h"
 #include "utils/log.h"
 #include "glad/glad.h"
-#include "render/Shader.h"
+#include "render/shader.h"
 
 #include <iostream>
 #include "stb/stb_image.h"
@@ -144,9 +144,9 @@ void UI_Button::SetPos(float x, float y)
 
 int UI_Button::CompileShaders()
 {
-	shaderProg.Create(
-		LoadShader("default_ui.vert"),
-		LoadShader("default_ui.frag"));
+	//shaderProg.Create( //TODO: Fix
+		//LoadShader("default_ui.vert"),
+		//LoadShader("default_ui.frag"));
 	glGenTextures(1, &texture1);
 	glBindTexture(GL_TEXTURE_2D, texture1);
 	// set the texture wrapping parameters
@@ -224,7 +224,7 @@ int UI_Button::Render()
 	}
 	else
 	{
-		RENDER_LOG_ERROR("Object: " + obj_name + " was not created");
+		//RENDER_LOG_ERROR("Object: " + obj_name + " was not created");
 	}
 	return 0;
 }

@@ -6,7 +6,9 @@ void Texture::Create(std::string path, GLenum texType, GLenum slot, GLenum forma
 	type = texType;
 
 	int widthImg, heightImg, numColCh;
-	unsigned char* bytes = LoadTexture(path, &widthImg, &heightImg, &numColCh);
+	
+	unsigned char* bytes;
+	//unsigned char* bytes = LoadTexture(path, &widthImg, &heightImg, &numColCh); //TODO: Fix
 	// Generates an OpenGL texture object
 	glGenTextures(1, &ID);
 	glActiveTexture(slot);

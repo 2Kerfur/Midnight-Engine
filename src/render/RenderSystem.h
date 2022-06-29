@@ -1,12 +1,11 @@
 #ifndef RENDERSYSTEM
 #define RENDERSYSTEM
-    #include "Shader.h"
     #include "render/UI/Objects/UI_Image.h"
     #include "render/UI/Objects/UI_Button.h"
 
     #include "GLFW/glfw3.h"
     
-    #include "Shader.h"
+    #include "shader.h"
     #include "VBO.h"
     #include "VAO.h"
     #include "EBO.h"

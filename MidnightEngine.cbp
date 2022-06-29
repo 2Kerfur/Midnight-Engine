@@ -1,0 +1,2506 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="MidnightEngine"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\external\;CMake Files\external\glfw\;CMake Files\external\glfw\src\;CMake Files\external\glfw\examples\;CMake Files\external\glfw\tests\;CMake Files\external\glfw\docs\;CMake Files\external\spdlog-1.10.0\;CMake Files\external\spdlog-1.10.0\cmake\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/strip">
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="MidnightEngine">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/MidnightEngine" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glad/include"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/imgui"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/freetype"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/assimp/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/Makefile&quot;  VERBOSE=1 MidnightEngine"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="MidnightEngine/fast">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/MidnightEngine" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glad/include"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/imgui"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/freetype"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/assimp/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/Makefile&quot;  VERBOSE=1 MidnightEngine/fast"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="list_install_components">
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/local">
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install">
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="uninstall">
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/Makefile&quot;  VERBOSE=1 uninstall"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="glfw">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/src/libglfw3.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_GLFW_USE_CONFIG_H"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/src"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/src/Makefile&quot;  VERBOSE=1 glfw"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="glfw/fast">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/src/libglfw3.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_GLFW_USE_CONFIG_H"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/src"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/src/Makefile&quot;  VERBOSE=1 glfw/fast"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="update_mappings">
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/src"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/src/Makefile&quot;  VERBOSE=1 update_mappings"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="wave">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/wave" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples"/>
+				<Option object_output="./"/>
+				<Option type="0"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 wave"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="wave/fast">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/wave" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples"/>
+				<Option object_output="./"/>
+				<Option type="0"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 wave/fast"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="simple">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/simple" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples"/>
+				<Option object_output="./"/>
+				<Option type="0"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 simple"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="simple/fast">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/simple" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples"/>
+				<Option object_output="./"/>
+				<Option type="0"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 simple/fast"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gears">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/gears" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples"/>
+				<Option object_output="./"/>
+				<Option type="0"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 gears"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gears/fast">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/gears" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples"/>
+				<Option object_output="./"/>
+				<Option type="0"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 gears/fast"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="boing">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/boing" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples"/>
+				<Option object_output="./"/>
+				<Option type="0"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 boing"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="boing/fast">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/boing" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples"/>
+				<Option object_output="./"/>
+				<Option type="0"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 boing/fast"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="heightmap">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/heightmap" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples"/>
+				<Option object_output="./"/>
+				<Option type="0"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 heightmap"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="heightmap/fast">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/heightmap" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples"/>
+				<Option object_output="./"/>
+				<Option type="0"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 heightmap/fast"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="splitview">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/splitview" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples"/>
+				<Option object_output="./"/>
+				<Option type="0"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 splitview"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="splitview/fast">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/splitview" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples"/>
+				<Option object_output="./"/>
+				<Option type="0"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 splitview/fast"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="offscreen">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/offscreen" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 offscreen"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="offscreen/fast">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/offscreen" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 offscreen/fast"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="particles">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/particles" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples"/>
+				<Option object_output="./"/>
+				<Option type="0"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 particles"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="particles/fast">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/particles" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples"/>
+				<Option object_output="./"/>
+				<Option type="0"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 particles/fast"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sharing">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/sharing" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples"/>
+				<Option object_output="./"/>
+				<Option type="0"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 sharing"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sharing/fast">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/sharing" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples"/>
+				<Option object_output="./"/>
+				<Option type="0"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 sharing/fast"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="title">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/title" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests"/>
+				<Option object_output="./"/>
+				<Option type="0"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 title"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="title/fast">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/title" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests"/>
+				<Option object_output="./"/>
+				<Option type="0"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 title/fast"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="timeout">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/timeout" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests"/>
+				<Option object_output="./"/>
+				<Option type="0"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 timeout"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="timeout/fast">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/timeout" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests"/>
+				<Option object_output="./"/>
+				<Option type="0"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 timeout/fast"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="monitors">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/monitors" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 monitors"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="monitors/fast">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/monitors" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 monitors/fast"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="clipboard">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/clipboard" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clipboard"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="clipboard/fast">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/clipboard" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clipboard/fast"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cursor">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/cursor" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 cursor"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cursor/fast">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/cursor" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 cursor/fast"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="msaa">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/msaa" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 msaa"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="msaa/fast">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/msaa" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 msaa/fast"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="glfwinfo">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/glfwinfo" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 glfwinfo"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="glfwinfo/fast">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/glfwinfo" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 glfwinfo/fast"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="threads">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/threads" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests"/>
+				<Option object_output="./"/>
+				<Option type="0"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 threads"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="threads/fast">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/threads" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests"/>
+				<Option object_output="./"/>
+				<Option type="0"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 threads/fast"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="reopen">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/reopen" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 reopen"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="reopen/fast">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/reopen" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 reopen/fast"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="triangle-vulkan">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/triangle-vulkan" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests"/>
+				<Option object_output="./"/>
+				<Option type="0"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 triangle-vulkan"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="triangle-vulkan/fast">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/triangle-vulkan" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests"/>
+				<Option object_output="./"/>
+				<Option type="0"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 triangle-vulkan/fast"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="opacity">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/opacity" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests"/>
+				<Option object_output="./"/>
+				<Option type="0"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 opacity"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="opacity/fast">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/opacity" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests"/>
+				<Option object_output="./"/>
+				<Option type="0"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 opacity/fast"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="iconify">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/iconify" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 iconify"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="iconify/fast">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/iconify" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 iconify/fast"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gamma">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/gamma" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests"/>
+				<Option object_output="./"/>
+				<Option type="0"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 gamma"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gamma/fast">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/gamma" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests"/>
+				<Option object_output="./"/>
+				<Option type="0"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 gamma/fast"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="events">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/events" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 events"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="events/fast">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/events" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 events/fast"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="icon">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/icon" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests"/>
+				<Option object_output="./"/>
+				<Option type="0"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 icon"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="icon/fast">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/icon" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests"/>
+				<Option object_output="./"/>
+				<Option type="0"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 icon/fast"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="joysticks">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/joysticks" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests"/>
+				<Option object_output="./"/>
+				<Option type="0"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 joysticks"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="joysticks/fast">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/joysticks" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests"/>
+				<Option object_output="./"/>
+				<Option type="0"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 joysticks/fast"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="windows">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/windows" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests"/>
+				<Option object_output="./"/>
+				<Option type="0"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 windows"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="windows/fast">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/windows" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests"/>
+				<Option object_output="./"/>
+				<Option type="0"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 windows/fast"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="empty">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/empty" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests"/>
+				<Option object_output="./"/>
+				<Option type="0"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 empty"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="empty/fast">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/empty" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests"/>
+				<Option object_output="./"/>
+				<Option type="0"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 empty/fast"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="inputlag">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/inputlag" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests"/>
+				<Option object_output="./"/>
+				<Option type="0"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 inputlag"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="inputlag/fast">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/inputlag" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests"/>
+				<Option object_output="./"/>
+				<Option type="0"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 inputlag/fast"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="tearing">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/tearing" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests"/>
+				<Option object_output="./"/>
+				<Option type="0"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 tearing"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="tearing/fast">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/tearing" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests"/>
+				<Option object_output="./"/>
+				<Option type="0"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 tearing/fast"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="docs">
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/docs"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/docs/Makefile&quot;  VERBOSE=1 docs"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/docs/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/docs/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/docs/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="spdlog">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/libspdlog.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DSPDLOG_COMPILED_LIB"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/Makefile&quot;  VERBOSE=1 spdlog"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="spdlog/fast">
+				<Option output="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/libspdlog.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DSPDLOG_COMPILED_LIB"/>
+					<Add directory="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/Makefile&quot;  VERBOSE=1 spdlog/fast"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/freetype/ft2build.h">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glad/src/glad.c">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/CMake/GenerateMappings.cmake">
+			<Option target="update_mappings"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps/getopt.c">
+			<Option target="particles"/>
+			<Option target="monitors"/>
+			<Option target="clipboard"/>
+			<Option target="msaa"/>
+			<Option target="glfwinfo"/>
+			<Option target="iconify"/>
+			<Option target="events"/>
+			<Option target="windows"/>
+			<Option target="inputlag"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps/getopt.h">
+			<Option target="particles"/>
+			<Option target="monitors"/>
+			<Option target="clipboard"/>
+			<Option target="msaa"/>
+			<Option target="glfwinfo"/>
+			<Option target="iconify"/>
+			<Option target="events"/>
+			<Option target="windows"/>
+			<Option target="inputlag"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps/glad/gl.h">
+			<Option target="wave"/>
+			<Option target="simple"/>
+			<Option target="gears"/>
+			<Option target="boing"/>
+			<Option target="heightmap"/>
+			<Option target="splitview"/>
+			<Option target="offscreen"/>
+			<Option target="particles"/>
+			<Option target="sharing"/>
+			<Option target="title"/>
+			<Option target="timeout"/>
+			<Option target="monitors"/>
+			<Option target="clipboard"/>
+			<Option target="cursor"/>
+			<Option target="msaa"/>
+			<Option target="glfwinfo"/>
+			<Option target="threads"/>
+			<Option target="reopen"/>
+			<Option target="opacity"/>
+			<Option target="iconify"/>
+			<Option target="gamma"/>
+			<Option target="events"/>
+			<Option target="icon"/>
+			<Option target="joysticks"/>
+			<Option target="windows"/>
+			<Option target="empty"/>
+			<Option target="inputlag"/>
+			<Option target="tearing"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps/glad/vulkan.h">
+			<Option target="glfwinfo"/>
+			<Option target="triangle-vulkan"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps/glad_gl.c">
+			<Option target="wave"/>
+			<Option target="simple"/>
+			<Option target="gears"/>
+			<Option target="boing"/>
+			<Option target="heightmap"/>
+			<Option target="splitview"/>
+			<Option target="offscreen"/>
+			<Option target="particles"/>
+			<Option target="sharing"/>
+			<Option target="title"/>
+			<Option target="timeout"/>
+			<Option target="monitors"/>
+			<Option target="clipboard"/>
+			<Option target="cursor"/>
+			<Option target="msaa"/>
+			<Option target="glfwinfo"/>
+			<Option target="threads"/>
+			<Option target="reopen"/>
+			<Option target="opacity"/>
+			<Option target="iconify"/>
+			<Option target="gamma"/>
+			<Option target="events"/>
+			<Option target="icon"/>
+			<Option target="joysticks"/>
+			<Option target="windows"/>
+			<Option target="empty"/>
+			<Option target="inputlag"/>
+			<Option target="tearing"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps/glad_vulkan.c">
+			<Option target="glfwinfo"/>
+			<Option target="triangle-vulkan"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps/tinycthread.c">
+			<Option target="particles"/>
+			<Option target="threads"/>
+			<Option target="empty"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/deps/tinycthread.h">
+			<Option target="particles"/>
+			<Option target="threads"/>
+			<Option target="empty"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/boing.c">
+			<Option target="boing"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/gears.c">
+			<Option target="gears"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/heightmap.c">
+			<Option target="heightmap"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/offscreen.c">
+			<Option target="offscreen"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/particles.c">
+			<Option target="particles"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/sharing.c">
+			<Option target="sharing"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/simple.c">
+			<Option target="simple"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/splitview.c">
+			<Option target="splitview"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/wave.c">
+			<Option target="wave"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include/GLFW/glfw3.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/include/GLFW/glfw3native.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/src/context.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/src/egl_context.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/src/egl_context.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/src/glfw_config.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/src/glx_context.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/src/glx_context.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/src/init.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/src/input.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/src/internal.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/src/linux_joystick.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/src/linux_joystick.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/src/mappings.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/src/mappings.h.in">
+			<Option target="update_mappings"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/src/monitor.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/src/osmesa_context.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/src/osmesa_context.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/src/posix_thread.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/src/posix_thread.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/src/posix_time.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/src/posix_time.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/src/vulkan.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/src/window.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/src/x11_init.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/src/x11_monitor.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/src/x11_platform.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/src/x11_window.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/src/xkb_unicode.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/src/xkb_unicode.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/clipboard.c">
+			<Option target="clipboard"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/cursor.c">
+			<Option target="cursor"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/empty.c">
+			<Option target="empty"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/events.c">
+			<Option target="events"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/gamma.c">
+			<Option target="gamma"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/glfwinfo.c">
+			<Option target="glfwinfo"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/icon.c">
+			<Option target="icon"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/iconify.c">
+			<Option target="iconify"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/inputlag.c">
+			<Option target="inputlag"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/joysticks.c">
+			<Option target="joysticks"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/monitors.c">
+			<Option target="monitors"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/msaa.c">
+			<Option target="msaa"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/opacity.c">
+			<Option target="opacity"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/reopen.c">
+			<Option target="reopen"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/tearing.c">
+			<Option target="tearing"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/threads.c">
+			<Option target="threads"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/timeout.c">
+			<Option target="timeout"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/title.c">
+			<Option target="title"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/triangle-vulkan.c">
+			<Option target="triangle-vulkan"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/windows.c">
+			<Option target="windows"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/imgui/imconfig.h">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/imgui/imgui.cpp">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/imgui/imgui.h">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/imgui/imgui_demo.cpp">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/imgui/imgui_draw.cpp">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/imgui/imgui_impl_glfw.cpp">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/imgui/imgui_impl_glfw.h">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/imgui/imgui_impl_opengl3.cpp">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/imgui/imgui_impl_opengl3.h">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/imgui/imgui_impl_opengl3_loader.h">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/imgui/imgui_internal.h">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/imgui/imgui_tables.cpp">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/imgui/imgui_widgets.cpp">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/imgui/imstb_rectpack.h">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/imgui/imstb_textedit.h">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/imgui/imstb_truetype.h">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/async.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/async_logger-inl.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/async_logger.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/common-inl.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/common.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/details/backtracer-inl.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/details/backtracer.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/details/circular_q.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/details/console_globals.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/details/file_helper-inl.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/details/file_helper.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/details/fmt_helper.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/details/log_msg-inl.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/details/log_msg.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/details/log_msg_buffer-inl.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/details/log_msg_buffer.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/details/mpmc_blocking_q.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/details/null_mutex.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/details/os-inl.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/details/os.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/details/periodic_worker-inl.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/details/periodic_worker.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/details/registry-inl.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/details/registry.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/details/synchronous_factory.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/details/tcp_client-windows.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/details/tcp_client.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/details/thread_pool-inl.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/details/thread_pool.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/details/udp_client-windows.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/details/udp_client.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/details/windows_include.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/fmt/bin_to_hex.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/fmt/bundled/args.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/fmt/bundled/chrono.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/fmt/bundled/color.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/fmt/bundled/compile.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/fmt/bundled/core.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/fmt/bundled/format-inl.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/fmt/bundled/format.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/fmt/bundled/locale.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/fmt/bundled/os.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/fmt/bundled/ostream.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/fmt/bundled/printf.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/fmt/bundled/ranges.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/fmt/bundled/xchar.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/fmt/chrono.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/fmt/compile.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/fmt/fmt.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/fmt/ostr.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/fmt/ranges.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/fmt/xchar.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/formatter.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/fwd.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/logger-inl.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/logger.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/pattern_formatter-inl.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/pattern_formatter.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/sinks/android_sink.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/sinks/ansicolor_sink-inl.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/sinks/ansicolor_sink.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/sinks/base_sink-inl.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/sinks/base_sink.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/sinks/basic_file_sink-inl.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/sinks/basic_file_sink.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/sinks/daily_file_sink.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/sinks/dist_sink.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/sinks/dup_filter_sink.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/sinks/hourly_file_sink.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/sinks/mongo_sink.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/sinks/msvc_sink.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/sinks/null_sink.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/sinks/ostream_sink.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/sinks/qt_sinks.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/sinks/ringbuffer_sink.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/sinks/rotating_file_sink-inl.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/sinks/rotating_file_sink.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/sinks/sink-inl.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/sinks/sink.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/sinks/stdout_color_sinks-inl.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/sinks/stdout_color_sinks.h">
+			<Option target="MidnightEngine"/>
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/sinks/stdout_sinks-inl.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/sinks/stdout_sinks.h">
+			<Option target="MidnightEngine"/>
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/sinks/syslog_sink.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/sinks/systemd_sink.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/sinks/tcp_sink.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/sinks/udp_sink.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/sinks/win_eventlog_sink.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/sinks/wincolor_sink-inl.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/sinks/wincolor_sink.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/spdlog-inl.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/spdlog.h">
+			<Option target="MidnightEngine"/>
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/stopwatch.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/tweakme.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/include/spdlog/version.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/src/async.cpp">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/src/cfg.cpp">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/src/color_sinks.cpp">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/src/file_sinks.cpp">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/src/fmt.cpp">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/src/spdlog.cpp">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/src/stdout_sinks.cpp">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/App.cpp">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/App.h">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/Config.h">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/audio/audio.cpp">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/audio/audio.h">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/render/Actors/Mesh.cpp">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/render/Actors/Mesh.h">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/render/Camera.cpp">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/render/Camera.h">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/render/EBO.cpp">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/render/EBO.h">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/render/GameObject.cpp">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/render/GameObject.h">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/render/RenderSystem.cpp">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/render/RenderSystem.h">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/render/Shader.cpp">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/render/Texture.cpp">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/render/Texture.h">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/render/UI/Objects/UI.cpp">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/render/UI/Objects/UI.h">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/render/UI/Objects/UI_Button.cpp">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/render/UI/Objects/UI_Button.h">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/render/UI/Objects/UI_Image.cpp">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/render/UI/Objects/UI_Image.h">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/render/UI/Objects/UI_Text.cpp">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/render/UI/Objects/UI_Text.h">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/render/UI/UI_manager.cpp">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/render/UI/UI_manager.h">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/render/VAO.cpp">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/render/VAO.h">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/render/VBO.cpp">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/render/VBO.h">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/render/shader.h">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/utils/loader/ResourceLoader.cpp">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/utils/loader/ResourceLoader.h">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/utils/log.cpp">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/utils/log.h">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/utils/native/FileDialog.cpp">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/utils/native/FileDialog.h">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/utils/native/FolderDialog.cpp">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/utils/native/FolderDialog.h">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/window/events/EventSystem.cpp">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/window/events/EventSystem.h">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/window/events/keyboard/GetKey.cpp">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/window/events/keyboard/GetKey.h">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/window/events/keyboard/keyboardEvent.cpp">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/window/events/keyboard/keyboardEvent.h">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/window/events/mouse/mouseEvent.cpp">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/window/events/mouse/mouseEvent.h">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/window/events/windowEvent.cpp">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/window/events/windowEvent.h">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/window/window.cpp">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/src/window/window.h">
+			<Option target="MidnightEngine"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\external\glfw\"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/cmake_uninstall.cmake.in">
+			<Option virtualFolder="CMake Files\external\glfw\"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\external\glfw\src\"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/src/glfw3.pc.in">
+			<Option virtualFolder="CMake Files\external\glfw\src\"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/src/glfw3Config.cmake.in">
+			<Option virtualFolder="CMake Files\external\glfw\src\"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/src/glfw_config.h.in">
+			<Option virtualFolder="CMake Files\external\glfw\src\"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/examples/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\external\glfw\examples\"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/tests/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\external\glfw\tests\"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/docs/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\external\glfw\docs\"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/glfw/docs/Doxyfile.in">
+			<Option virtualFolder="CMake Files\external\glfw\docs\"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\external\spdlog-1.10.0\"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/cmake/ide.cmake">
+			<Option virtualFolder="CMake Files\external\spdlog-1.10.0\cmake\"/>
+		</Unit>
+		<Unit filename="/home/kerfur/DEV/MY_GITHUB/Midnight-Engine/external/spdlog-1.10.0/cmake/utils.cmake">
+			<Option virtualFolder="CMake Files\external\spdlog-1.10.0\cmake\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

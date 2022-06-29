@@ -1,0 +1,7 @@
+/home/kerfur/Downloads/clion/clion-2019.2/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Release -G "CodeBlocks - Unix Makefiles" /home/kerfur/DEV/MY_GITHUB/Midnight-Engine
+-- Using X11 for window creation
+-- Build spdlog: 1.10.0
+-- Build type: Release
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/kerfur/DEV/MY_GITHUB/Midnight-Engine

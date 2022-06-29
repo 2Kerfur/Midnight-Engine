@@ -1,6 +1,6 @@
-#include"Shader.h"
+#include"shader.h"
 #include <string>
-#include "utils/log.h"
+//#include "utils/log.h"
 // Constructor that build the Shader Program from 2 different shaders
 void Shader::Create(std::string Vertex, std::string Fragment)
 {
@@ -53,7 +53,7 @@ void Shader::compileErrors(unsigned int shader, const char* type)
 		if (hasCompiled == GL_FALSE)
 		{
 			glGetShaderInfoLog(shader, 1024, NULL, infoLog);
-			SHADER_LOG_ERROR("SHADER_COMPILATION_ERROR for:" + std::string(infoLog));
+			//SHADER_LOG_ERROR("SHADER_COMPILATION_ERROR for:" + std::string(infoLog));
 		}
 	}
 	else
@@ -62,7 +62,7 @@ void Shader::compileErrors(unsigned int shader, const char* type)
 		if (hasCompiled == GL_FALSE)
 		{
 			glGetProgramInfoLog(shader, 1024, NULL, infoLog);
-			SHADER_LOG_ERROR("SHADER_LINKING_ERROR for:" + std::string(infoLog));
+			//SHADER_LOG_ERROR("SHADER_LINKING_ERROR for:" + std::string(infoLog));
 		}
 	}
 }

@@ -1,0 +1,43 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/MidnightEngine.dir/src/App.cpp.o"
+  "CMakeFiles/MidnightEngine.dir/src/audio/audio.cpp.o"
+  "CMakeFiles/MidnightEngine.dir/src/window/window.cpp.o"
+  "CMakeFiles/MidnightEngine.dir/src/window/events/EventSystem.cpp.o"
+  "CMakeFiles/MidnightEngine.dir/src/window/events/windowEvent.cpp.o"
+  "CMakeFiles/MidnightEngine.dir/src/window/events/keyboard/keyboardEvent.cpp.o"
+  "CMakeFiles/MidnightEngine.dir/src/window/events/keyboard/GetKey.cpp.o"
+  "CMakeFiles/MidnightEngine.dir/src/window/events/mouse/mouseEvent.cpp.o"
+  "CMakeFiles/MidnightEngine.dir/src/utils/log.cpp.o"
+  "CMakeFiles/MidnightEngine.dir/src/utils/loader/ResourceLoader.cpp.o"
+  "CMakeFiles/MidnightEngine.dir/src/utils/native/FileDialog.cpp.o"
+  "CMakeFiles/MidnightEngine.dir/src/utils/native/FolderDialog.cpp.o"
+  "CMakeFiles/MidnightEngine.dir/src/render/RenderSystem.cpp.o"
+  "CMakeFiles/MidnightEngine.dir/src/render/Shader.cpp.o"
+  "CMakeFiles/MidnightEngine.dir/src/render/GameObject.cpp.o"
+  "CMakeFiles/MidnightEngine.dir/src/render/Camera.cpp.o"
+  "CMakeFiles/MidnightEngine.dir/src/render/EBO.cpp.o"
+  "CMakeFiles/MidnightEngine.dir/src/render/Texture.cpp.o"
+  "CMakeFiles/MidnightEngine.dir/src/render/VAO.cpp.o"
+  "CMakeFiles/MidnightEngine.dir/src/render/VBO.cpp.o"
+  "CMakeFiles/MidnightEngine.dir/src/render/Actors/Mesh.cpp.o"
+  "CMakeFiles/MidnightEngine.dir/src/render/UI/UI_manager.cpp.o"
+  "CMakeFiles/MidnightEngine.dir/src/render/UI/Objects/UI_Button.cpp.o"
+  "CMakeFiles/MidnightEngine.dir/src/render/UI/Objects/UI_Image.cpp.o"
+  "CMakeFiles/MidnightEngine.dir/src/render/UI/Objects/UI_Text.cpp.o"
+  "CMakeFiles/MidnightEngine.dir/src/render/UI/Objects/UI.cpp.o"
+  "CMakeFiles/MidnightEngine.dir/external/glad/src/glad.c.o"
+  "CMakeFiles/MidnightEngine.dir/external/imgui/imgui.cpp.o"
+  "CMakeFiles/MidnightEngine.dir/external/imgui/imgui_demo.cpp.o"
+  "CMakeFiles/MidnightEngine.dir/external/imgui/imgui_draw.cpp.o"
+  "CMakeFiles/MidnightEngine.dir/external/imgui/imgui_impl_glfw.cpp.o"
+  "CMakeFiles/MidnightEngine.dir/external/imgui/imgui_impl_opengl3.cpp.o"
+  "CMakeFiles/MidnightEngine.dir/external/imgui/imgui_tables.cpp.o"
+  "CMakeFiles/MidnightEngine.dir/external/imgui/imgui_widgets.cpp.o"
+  "MidnightEngine.pdb"
+  "MidnightEngine"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang C CXX)
+  include(CMakeFiles/MidnightEngine.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

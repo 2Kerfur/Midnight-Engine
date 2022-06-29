@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.20)
+cmake_minimum_required(VERSION 3.14)
 
 project(MidnightEngine VERSION 0.1)
 find_package(OpenGL REQUIRED)
@@ -18,21 +18,21 @@ add_executable(${PROJECT_NAME}
     src/audio/audio.h
 
     #WINDOW
-    src/window/Window.cpp
-    src/window/Window.h
-        #events
+    src/window/window.cpp
+    src/window/window.h
+    #events
         src/window/events/EventSystem.cpp
         src/window/events/EventSystem.h
         src/window/events/windowEvent.cpp
         src/window/events/windowEvent.h
             #keyboard
-            src/window/events/keyboard/keyboardEvent.cpp
-            src/window/events/keyboard/keyboardEvent.h
-            src/window/events/keyboard/GetKey.h
-            src/window/events/keyboard/GetKey.cpp
-            #mouse
-            src/window/events/mouse/mouseEvent.cpp
-            src/window/events/mouse/mouseEvent.h
+           src/window/events/keyboard/keyboardEvent.cpp
+           src/window/events/keyboard/keyboardEvent.h
+           src/window/events/keyboard/GetKey.h
+           src/window/events/keyboard/GetKey.cpp
+           #mouse
+          src/window/events/mouse/mouseEvent.cpp
+           src/window/events/mouse/mouseEvent.h
             
     #UTILS
     src/utils/log.cpp
@@ -46,15 +46,15 @@ add_executable(${PROJECT_NAME}
         src/utils/native/FolderDialog.cpp
         src/utils/native/FolderDialog.h
 
-    #RENDER
+    # #RENDER
     src/render/RenderSystem.cpp
     src/render/RenderSystem.h
-    src/render/Shader.h
+    src/render/shader.h
     src/render/Shader.cpp
     src/render/GameObject.cpp
     src/render/GameObject.h
     
-    #new update
+    # #new update
     src/render/Camera.cpp
     src/render/Camera.h
 
@@ -141,5 +141,5 @@ if (WIN32)
 endif (WIN32)
 
 if (UNIX)
-    target_link_libraries(${PROJECT_NAME} glfw3 X11 dl pthread)
+    target_link_libraries(${PROJECT_NAME} glfw3 X11 dl pthread ${OPENGL_LIBRARIES} ${GLAD_LIBRARY})
 endif (UNIX)

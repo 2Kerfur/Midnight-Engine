@@ -14,7 +14,7 @@ std::string GetCurrentDir()
 
 	return std::string(buffer).substr(0, pos);
 }
-#endif
+
 
 std::string LoadShader(std::string path) //TODO: Create linux implementation
 {
@@ -47,3 +47,4 @@ unsigned char* LoadTexture(std::string path,
 	bytes = stbi_load(image, width, height, numColch, 0);
 	return bytes;
 }
+#endif

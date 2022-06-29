@@ -4,7 +4,7 @@
     #include <shlobj.h> 
     #define _SILENCE_EXPERIMENTAL_FILESYSTEM_DEPRECATION_WARNING //filesystem fix error
     #include <experimental/filesystem>
-#endif
+
 
 std::string OpenFile()
 {
@@ -45,3 +45,4 @@ std::string OpenFile()
 	}
 	return nullptr;
 }
+#endif

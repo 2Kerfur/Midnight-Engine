@@ -24,7 +24,7 @@ void Log_init()
 
 //ENGINE
     //string
-void engine_log_trace(std::string message) { engine_console->trace(message); }
+    void engine_log_trace(std::string message) { engine_console->trace(message); }
     void engine_log_info(std::string message) { engine_console->info(message); }
     void engine_log_warn(std::string message) { engine_console->warn(message); }
     void engine_log_error(std::string message) { engine_console->error(message); }

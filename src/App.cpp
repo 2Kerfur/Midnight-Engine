@@ -2,24 +2,23 @@
 #include "window/window.h"
 
 #include "utils/log.h"
-#include "render/UI/Objects/UI_Image.h" //ui
-#include "render/UI/Objects/UI_Button.h" //ui
+//#include "render/UI/Objects/UI_Image.h" //ui
+//#include "render/UI/Objects/UI_Button.h" //ui
 
 #include "render/RenderSystem.h"
 
-#include "window/events/keyboard/keyboardEvent.h"
-#include "audio/audio.h"
-#include<iostream>
+//#include "window/events/keyboard/keyboardEvent.h"
+//#include "audio/audio.h"
 
 #include "Config.h"
 
-#include<glad/glad.h>
-#include<GLFW/glfw3.h>
+//#include<glad/glad.h>
+//#include<GLFW/glfw3.h>
 
 
 void getdata(char pressed)
 {
-    LOG_INFO("Button pressed");
+    //LOG_INFO("Button pressed");
 }
 
 //
@@ -28,21 +27,27 @@ int main()
     //LOG_INIT();
     Window MainWindow;
     MainWindow.InitWindow(1000, 800, "MidnightEngine");
+    #ifdef _WIN32
     MainWindow.SetIcon("resources\\images\\icon.png");
+    #endif
+    #ifdef __linux__
+    MainWindow.SetIcon("resources/images/icon.png");
+    #endif
+    
 
     MainWindow.InitEngine();
     //MainWindow.SetFullscreen();
 
-    UI_Image image;
-    UI_Button button;
-    image.Create(100, 100, 100, 100, "testImage", "testPath");
-    button.Create(0,0, 100, 100, "testButton", "testPath", MainWindow.GetWindow());
-    button.SetListener(&getdata);
+    //UI_Image image;
+    //UI_Button button;
+    //image.Create(100, 100, 100, 100, "testImage", "testPath");
+    //button.Create(0,0, 100, 100, "testButton", "testPath", MainWindow.GetWindow());
+    //button.SetListener(&getdata);
 
     RenderSystem* engine;
     engine = MainWindow.GetEngine();
     //engine->AddGameObject(&image);
-    engine->AddGameObject(&button);
+    //engine->AddGameObject(&button);
 
 
     MainWindow.CompileShaders();
